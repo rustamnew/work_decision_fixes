@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("image", SITE_TEMPLATE_PATH."/assets/images/header/06_header.jpg");
-$APPLICATION->SetTitle("Âîïğîñû è îòâåòû");
+$APPLICATION->SetTitle("Ğ’Ğ¾Ğ¿Ñ€Ğ¾ÑÑ‹ Ğ¸ Ğ¾Ñ‚Ğ²ĞµÑ‚Ñ‹");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"codekeepers:news.list.justice", 
@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Âîïğîñû è îòâåòû");
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "N",
 		"DISPLAY_NAME" => "N",
 		"DISPLAY_PICTURE" => "N",
@@ -43,8 +43,8 @@ $APPLICATION->SetTitle("Âîïğîñû è îòâåòû");
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Íîâîñòè",
+		"PAGER_TEMPLATE" => "bootstrap_v4",
+		"PAGER_TITLE" => "ĞĞ¾Ğ²Ğ¾ÑÑ‚Ğ¸",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
@@ -65,9 +65,9 @@ $APPLICATION->SetTitle("Âîïğîñû è îòâåòû");
 		"SORT_ORDER2" => "DESC",
 		"STRICT_SECTION_CHECK" => "N",
 		"COMPONENT_TEMPLATE" => "faq",
-		"NAME" => "Âîïğîñû",
-		"TITLE" => "Îòâåòû íà ÷àñòî çàäàâàåìûå âîïğîñû",
-		"SUBTITLE" => "Ğåøåíèÿ ïğèíèìàşòñÿ ïğîôåññèîíàëàìè. Ìû ãàğàíòèğóåì âûñîêîå êà÷åñòâî îêàçàíèÿ óñëóã.",
+		"NAME" => "Ğ’Ğ¾Ğ¿Ñ€Ğ¾ÑÑ‹",
+		"TITLE" => "ĞÑ‚Ğ²ĞµÑ‚Ñ‹ Ğ½Ğ° Ñ‡Ğ°ÑÑ‚Ğ¾ Ğ·Ğ°Ğ´Ğ°Ğ²Ğ°ĞµĞ¼Ñ‹Ğµ Ğ²Ğ¾Ğ¿Ñ€Ğ¾ÑÑ‹",
+		"SUBTITLE" => "Ğ ĞµÑˆĞµĞ½Ğ¸Ñ Ğ¿Ñ€Ğ¸Ğ½Ğ¸Ğ¼Ğ°ÑÑ‚ÑÑ Ğ¿Ñ€Ğ¾Ñ„ĞµÑÑĞ¸Ğ¾Ğ½Ğ°Ğ»Ğ°Ğ¼Ğ¸. ĞœÑ‹ Ğ³Ğ°Ñ€Ğ°Ğ½Ñ‚Ğ¸Ñ€ÑƒĞµĞ¼ Ğ²Ñ‹ÑĞ¾ĞºĞ¾Ğµ ĞºĞ°Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¾ĞºĞ°Ğ·Ğ°Ğ½Ğ¸Ñ ÑƒÑĞ»ÑƒĞ³.",
 		"EXPAND" => "Y"
 	),
 	false

@@ -51,7 +51,11 @@ $this->setFrameMode(true);
 						<?$i++;?>
 					<?endforeach;?>
 				</div>
-
+				<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+					<div class="col-md-12">
+						<?=$arResult["NAV_STRING"]?>
+					</div>
+				<?endif;?>
 			<?elseif ($arParams["EXPAND"] == 'N' || $arParams["EXPAND"] == false):?>
 				<div class="col-lg-6">
 					<?for ($i = 0; $i <= count($arResult["ITEMS"]) - 1; $i++) {

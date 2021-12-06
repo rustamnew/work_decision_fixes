@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="single-practice-areas-box">
+<div class="single-practice-areas-box career-detail-page">
 	<h3 class="career-detail-title"><?=$arResult["NAME"]?></h3>
 	<ul class="career-detail-tags">
 		<li class="active"><?=$arResult["PROPERTIES"]["employment"]["VALUE"];?></li>

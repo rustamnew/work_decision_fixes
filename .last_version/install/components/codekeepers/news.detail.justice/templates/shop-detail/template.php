@@ -58,7 +58,7 @@ $this->setFrameMode(true);
 						<?endif;?>
 					</ul>
 						<p class="product-detail-text-additional active"><?=$arResult["DETAIL_TEXT"]?></p>
-						<p class="product-detail-text-specs"><?=nl2br($arResult["PROPERTIES"]["specs"]["VALUE"]["TEXT"]);?></p>
+						<p class="product-detail-text-specs <?if(!$arResult["DETAIL_TEXT"]):?>active<?endif;?>"><?=nl2br($arResult["PROPERTIES"]["specs"]["VALUE"]["TEXT"]);?></p>
 				</div>
 			</div>
 		</div>

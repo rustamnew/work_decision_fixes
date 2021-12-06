@@ -16,7 +16,12 @@ $this->setFrameMode(true);
 
 <?$arItem = $arResult["ITEMS"][0];?>
 
-<section class="flat-get-in-touch py-100">
+<?
+$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+?>
+
+<section class="flat-get-in-touch py-100" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
     <div class="container">
         <div class="wrap-get-in-touch">
             <div class="get-in-touch">
@@ -38,7 +43,7 @@ $this->setFrameMode(true);
                 );?>
             </div>
             <div class="contact-info">
-                <h3><?=$arItem["PROPERTIES"]["title2"]["VALUE"];?></h3>
+                <h2><?=$arItem["PROPERTIES"]["title2"]["VALUE"];?></h2>
 
                 <ul>
                 <?if($GLOBALS['global_info']['contacts_phone_show']):?>
@@ -62,7 +67,7 @@ $this->setFrameMode(true);
 							<?endif;?>
                         </div>
                         <div class="wrap-info">
-                            <h2><?=$arItem["PROPERTIES"]["title_phone"]["VALUE"];?></h2>
+                            <h3><?=$arItem["PROPERTIES"]["title_phone"]["VALUE"];?></h3>
                             <p class="top"><?=$GLOBALS['global_info']['contacts_phone1'];?></p>
                             <p class="bottom"><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
                         </div>
@@ -90,7 +95,7 @@ $this->setFrameMode(true);
 							<?endif;?>
                         </div>
                         <div class="wrap-info">
-                            <h2><?=$arItem["PROPERTIES"]["title_email"]["VALUE"];?></h2>
+                            <h3><?=$arItem["PROPERTIES"]["title_email"]["VALUE"];?></h3>
                             <p class="top"><?=$GLOBALS['global_info']['contacts_email1'];?></p>
                             <p class="bottom"><?=$GLOBALS['global_info']['contacts_email2'];?></p>
                         </div>
@@ -118,7 +123,7 @@ $this->setFrameMode(true);
 							<?endif;?>
                         </div>
                         <div class="wrap-info">
-                            <h2><?=$arItem["PROPERTIES"]["title_address"]["VALUE"];?></h2>
+                            <h3><?=$arItem["PROPERTIES"]["title_address"]["VALUE"];?></h3>
                             <p class="top"><?=$GLOBALS['global_info']['contacts_address1'];?></p>
                             <p class="bottom"><?=$GLOBALS['global_info']['contacts_address2'];?></p>
                         </div>

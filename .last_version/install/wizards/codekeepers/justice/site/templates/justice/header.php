@@ -266,51 +266,61 @@ if(CModule::IncludeModule('iblock')) {
                         <p><?=$GLOBALS["global_info"]["header_extra_description"];?></p>    
                     </div>
                     <div class="contact-info">
-                        <h4>
-                            <?=$GLOBALS["global_info"]["header_extra_title_contacts"];?>
-                        </h4>
+                        <?if($GLOBALS['global_info']['contacts_phone_show'] or $GLOBALS['global_info']['contacts_email_show'] or $GLOBALS['global_info']['contacts_address_show']):?>
+                            <h4>
+                                <?=$GLOBALS["global_info"]["header_extra_title_contacts"];?>
+                            </h4>
+                        <?endif;?>
 
-                        <div class="contact-box">
-                            <i class="flaticon-call"></i>
-                            <div class="box">
-                                <?if($GLOBALS['global_info']['contacts_phone1']):?>
-                                    <a href="tel:<?=$GLOBALS['global_info']['contacts_phone1'];?>">
-                                        <p><?=$GLOBALS['global_info']['contacts_phone1'];?></p>
-                                    </a>
-                                <?endif;?>
-                                <?if($GLOBALS['global_info']['contacts_phone2']):?>
-                                    <a href="tel:<?=$GLOBALS['global_info']['contacts_phone2'];?>">
-                                        <p><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
-                                    </a>
-                                <?endif;?>
+                        <?if($GLOBALS['global_info']['contacts_phone_show']):?>
+                            <div class="contact-box">
+                                <i class="flaticon-call"></i>
+                                <div class="box">
+                                    <?if($GLOBALS['global_info']['contacts_phone1']):?>
+                                        <a href="tel:<?=$GLOBALS['global_info']['contacts_phone1'];?>">
+                                            <p><?=$GLOBALS['global_info']['contacts_phone1'];?></p>
+                                        </a>
+                                    <?endif;?>
+                                    <?if($GLOBALS['global_info']['contacts_phone2']):?>
+                                        <a href="tel:<?=$GLOBALS['global_info']['contacts_phone2'];?>">
+                                            <p><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
+                                        </a>
+                                    <?endif;?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-box">
-                            <i class="flaticon-email"></i>
-                            <div class="box">
-                                <?if($GLOBALS['global_info']['contacts_email1']):?>
-                                    <a href="mailto:<?=$GLOBALS['global_info']['contacts_email1'];?>">
-                                        <p><?=$GLOBALS['global_info']['contacts_email1'];?></p>
-                                    </a>
-                                <?endif;?>
-                                <?if($GLOBALS['global_info']['contacts_email2']):?>
-                                    <a href="mailto:<?=$GLOBALS['global_info']['contacts_email2'];?>">
-                                        <p><?=$GLOBALS['global_info']['contacts_email2'];?></p>
-                                    </a>
-                                <?endif;?>
+                        <?endif;?>
+
+                        <?if($GLOBALS['global_info']['contacts_email_show']):?>
+                            <div class="contact-box">
+                                <i class="flaticon-email"></i>
+                                <div class="box">
+                                    <?if($GLOBALS['global_info']['contacts_email1']):?>
+                                        <a href="mailto:<?=$GLOBALS['global_info']['contacts_email1'];?>">
+                                            <p><?=$GLOBALS['global_info']['contacts_email1'];?></p>
+                                        </a>
+                                    <?endif;?>
+                                    <?if($GLOBALS['global_info']['contacts_email2']):?>
+                                        <a href="mailto:<?=$GLOBALS['global_info']['contacts_email2'];?>">
+                                            <p><?=$GLOBALS['global_info']['contacts_email2'];?></p>
+                                        </a>
+                                    <?endif;?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-box">
-                            <i class="flaticon-location"></i>
-                            <div class="box">
-                                <?if($GLOBALS['global_info']['contacts_address1']):?>
-                                    <p><?=$GLOBALS['global_info']['contacts_address1'];?></p>
-                                <?endif;?>
-                                <?if($GLOBALS['global_info']['contacts_address2']):?>
-                                    <p><?=$GLOBALS['global_info']['contacts_address2'];?></p>
-                                <?endif;?>
+                        <?endif;?>
+
+                        <?if($GLOBALS['global_info']['contacts_address_show']):?>
+                            <div class="contact-box">
+                                <i class="flaticon-location"></i>
+                                <div class="box">
+                                    <?if($GLOBALS['global_info']['contacts_address1']):?>
+                                        <p><?=$GLOBALS['global_info']['contacts_address1'];?></p>
+                                    <?endif;?>
+                                    <?if($GLOBALS['global_info']['contacts_address2']):?>
+                                        <p><?=$GLOBALS['global_info']['contacts_address2'];?></p>
+                                    <?endif;?>
+                                </div>
                             </div>
-                        </div>
+                        <?endif;?>
                     </div>
                     <div class="follow-us">
                         <h4>
@@ -358,7 +368,7 @@ if(CModule::IncludeModule('iblock')) {
                                 "PAGER_SHOW_ALL" => "N",
                                 "PAGER_SHOW_ALWAYS" => "N",
                                 "PAGER_TEMPLATE" => ".default",
-                                "PAGER_TITLE" => "�������",
+                                "PAGER_TITLE" => "Новости",
                                 "PARENT_SECTION" => "",
                                 "PARENT_SECTION_CODE" => "",
                                 "PREVIEW_TRUNCATE_LEN" => "",
@@ -440,7 +450,7 @@ if(CModule::IncludeModule('iblock')) {
                         "PAGER_SHOW_ALL" => "N",
                         "PAGER_SHOW_ALWAYS" => "N",
                         "PAGER_TEMPLATE" => ".default",
-                        "PAGER_TITLE" => "�������",
+                        "PAGER_TITLE" => "Новости",
                         "PARENT_SECTION" => "",
                         "PARENT_SECTION_CODE" => "",
                         "PREVIEW_TRUNCATE_LEN" => "",
@@ -480,6 +490,7 @@ if(CModule::IncludeModule('iblock')) {
                     false
                 );?>
             <?else:?>
+                
                 <section class="breadcrumb-header" id="page" style="background-image: url(<?echo $APPLICATION->ShowProperty("image");?>)">
                     <div class="overlay"></div>
                     <div class="container">
@@ -487,11 +498,11 @@ if(CModule::IncludeModule('iblock')) {
                             <div class="col-md-6">
                                 <div class="banner">
                                     <h1><?$APPLICATION->ShowTitle(false);?></h1>
-                                    <ul>
-                                        <li><a href="<?=SITE_DIR?>"><?=GetMessage('HEADER_NAV_MAINPAGE');?></a></li>
-                                        <li><i class="fas fa-angle-right"></i></li>
-                                        <li><?$APPLICATION->ShowTitle(false);?></li>
-                                    </ul>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:breadcrumb",
+                                        "",
+                                    Array()
+                                    );?>
                                 </div>
                             </div>
                         </div>

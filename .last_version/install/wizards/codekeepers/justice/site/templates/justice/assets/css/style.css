@@ -900,7 +900,6 @@ header.navs.active{
     margin-right: 12px;
 }
 .menu-box .inner-menu .follow-us .icon-follow li a{
-    //background-color: #F1F1F1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1460,7 +1459,7 @@ header.navs.active{
 
 /* :: Practice Area 2 */
 .practice-area-2{
-    //background-image: url(../images/practice-area/02_practice-area.jpg);
+    
 }
 .practice-area-2 .sec-title h3{
     color: #FFF;
@@ -1811,7 +1810,6 @@ header.navs.active{
 
 /* :: Contact */
 .contact{
-    //background-image: url(../images/contact/01_contact.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1974,7 +1972,6 @@ header.navs.active{
     color: #F1F1F1;
 }
 .provide .img-box{
-    //: url(../images/provide/01_provide.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2045,7 +2042,6 @@ header.navs.active{
 /* :: Presentation */
 .video-presentation{
     position: relative;
-    //background-image: url(../images/video-presentation/01_video-presentation.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2182,15 +2178,7 @@ header.navs.active{
     height: 55px;
     margin: auto;
 }
-.owl-testimonial.owl-theme .owl-dots .owl-dot:nth-of-type(1) span{
-    //background-image: url(../images/testimonial/01_testimonial.jpg);
-}
-.owl-testimonial.owl-theme .owl-dots .owl-dot:nth-of-type(2) span{
-    //background-image: url(../images/testimonial/02_testimonial.jpg);
-}
-.owl-testimonial.owl-theme .owl-dots .owl-dot:nth-of-type(3) span{
-    //background-image: url(../images/testimonial/03_testimonial.jpg);
-}
+
 .owl-testimonial.owl-theme .owl-nav{
     display: none;
 }
@@ -2198,7 +2186,6 @@ header.navs.active{
 /* :: Testimonial And Subscribe */
 .testimonial-and-subscribe,
 .testimonial-4{
-    //background-image: url(../images/testimonial-and-subscribe/01_testimonial-and-subscribe.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2298,7 +2285,6 @@ header.navs.active{
 }
 .owl-testimonial-1 .box-item .clients-talk .info h5,
 .owl-testimonial-3 .box-item .clients-talk .info h5{
-    //color: #FFF;
     color: #262B3E;
     padding-top: 8px;
     font-weight: 600;
@@ -2448,13 +2434,7 @@ header.navs.active{
     background-color: #FFF;
     color: #C89D66;
 }
-.footer-title h4{
-    color: #FFF;
-    font-size: 16px;
-    
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
+
 .footer .links li a{
     display: inline-block;
     position: relative;
@@ -2658,11 +2638,8 @@ header.navs.active{
 
 /* :: Single Practice Areas */
 .single-practice-areas-head h4{
-    font-size: 24px;
     line-height: 1.1;
     color: #262B3E;
-    
-    font-weight: 600;
     margin-bottom: 30px;
 }
 /*
@@ -2735,7 +2712,7 @@ header.navs.active{
 }
 .single-practice-areas-box h4{
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .benfits{
     overflow: hidden;
@@ -3333,7 +3310,6 @@ header.navs.active{
     color: #9B9B9B;
 }
 .active-dark-mode-decision .practice-area-3{
-    //background-image: url(../images/practice-area/01_practice-area.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4163,6 +4139,16 @@ section.provide .img-box .statistic-item-icon img{
 }
 .footer h4 {
     color: #F4F4F4;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.footer-title h4{
+    //color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 25px;
 }
 .footer a {
     color: #F4F4F4;
@@ -4234,7 +4220,6 @@ section.provide .img-box .statistic-item-icon img{
     float: left;
     display: inline-block;
     padding: 75px 80px 70px;
-    //background-image: url(../image/contact/contact2.png);
     background-repeat: no-repeat;
     background-position: top right;
     background-color: #fff;
@@ -4244,9 +4229,7 @@ section.provide .img-box .statistic-item-icon img{
 
 .flat-get-in-touch .get-in-touch h2 {
     font-family: 'Monsterrat', sans-serif;
-    font-size: 40px;
     line-height: 57px;
-    font-weight: 600;
     color: #0f0e26;
     letter-spacing: -1.3px;
     margin-bottom: 30px;
@@ -4304,19 +4287,17 @@ section.provide .img-box .statistic-item-icon img{
 
 .flat-get-in-touch .contact-info {
     width: 45%;
-    
     background-color: #C89D66;
     padding: 74px 79px 58px;
-    //background-image: url(../image/contact/contact1.png);
     background-repeat: no-repeat;
     background-position: top right;
 }
 
-.flat-get-in-touch .contact-info h3 {
+.flat-get-in-touch .contact-info h2 {
     font-family: 'Monsterrat', sans-serif;
-    font-size: 40px;
+    //font-size: 36px;
     line-height: 56px;
-    font-weight: 600;
+    //font-weight: 600;
     color: #fff;
     letter-spacing: -1.3px;
     margin-bottom: 30px;
@@ -4349,10 +4330,9 @@ section.provide .img-box .statistic-item-icon img{
     overflow: hidden;
 }
 
-.flat-get-in-touch .contact-info .wrap-info h2 {
+.flat-get-in-touch .contact-info .wrap-info h3 {
     font-family: 'Monsterrat', sans-serif;
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 22px;
     color: #fff;
     letter-spacing: -.7px;
     margin-bottom: 12px;
@@ -4360,8 +4340,7 @@ section.provide .img-box .statistic-item-icon img{
 
 .flat-get-in-touch .contact-info .wrap-info p {
     font-family: 'Monsterrat', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 17px;
     font-weight: 400;
     color: #fff;
     letter-spacing: 0;
@@ -4441,7 +4420,6 @@ section.provide .img-box .statistic-item-icon img{
     bottom: 0;
     left: -100%;
     z-index: 1000;
-    //display: none;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
@@ -4540,4 +4518,47 @@ section.provide .img-box .statistic-item-icon img{
 }
 .pagination.pagination-sm .page-link:hover:focus {
     color: #FFF;
+}
+
+
+
+/*fixes*/
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 26px;
+}
+h5 {
+    font-weight: 600;
+    font-size: 21px; 
+}
+
+.services-section-item h5 {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.single-practice-areas-list.accordion ul.submenu li {
+    margin-left: 15px;
+}
+
+.breadcrumb-header .bx-breadcrumb .bx-breadcrumb-item span {
+    font-size: 17px;
+}
+
+.career-detail-page .single-practice-areas-box {
+    display: flex;
+    flex-direction: column;
+}
+.career-detail-page .single-practice-areas-box .summonFormButton.btn-1{
+    align-self: center;
 }

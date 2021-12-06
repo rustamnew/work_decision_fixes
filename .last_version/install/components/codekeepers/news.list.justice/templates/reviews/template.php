@@ -31,9 +31,12 @@ $this->setFrameMode(true);
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
 					</div>
 					<div class="clients-talk">
-						<div class="img-box">
-							<img class="img-fluid" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="01 Testimonials">
-						</div>
+						<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?>
+							<div class="img-box">
+								<img class="img-fluid" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="01 Testimonials">
+							</div>
+						<?endif;?>
+						
 						<div class="info">
 							<h5><?=$arItem["NAME"]?></h5>
 							<span><?=$arItem["PROPERTIES"]["position"]["VALUE"];?></span>
