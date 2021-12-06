@@ -1,0 +1,37 @@
+<?
+$MESS["WZD_OPTION_0"] = "Элемент";
+$MESS["WZD_OPTION_1"] = "*Имя";
+$MESS["WZD_OPTION_2"] = "Изображение";
+$MESS["WZD_OPTION_3"] = "Специальность";
+$MESS["WZD_OPTION_4"] = "Социальные сети";
+$MESS["WZD_OPTION_5"] = "Социальная сеть Вконтакте";
+$MESS["WZD_OPTION_6"] = "Социальная сеть Instagram";
+$MESS["WZD_OPTION_7"] = "Социальная сеть Twitter";
+$MESS["WZD_OPTION_8"] = "Социальная сеть Facebook";
+$MESS["WZD_OPTION_9"] = "Социальная сеть Youtube";
+$MESS["WZD_OPTION_10"] = "Навыки";
+$MESS["WZD_OPTION_11"] = "Отображать навыки";
+$MESS["WZD_OPTION_12"] = "Заголовок навыков";
+$MESS["WZD_OPTION_13"] = "Навык 1";
+$MESS["WZD_OPTION_14"] = "Навык 1 название";
+$MESS["WZD_OPTION_15"] = "Навык 1 значение";
+$MESS["WZD_OPTION_16"] = "Навык 2";
+$MESS["WZD_OPTION_17"] = "Навык 2 название";
+$MESS["WZD_OPTION_18"] = "Навык 2 значение";
+$MESS["WZD_OPTION_19"] = "Навык 3";
+$MESS["WZD_OPTION_20"] = "Навык 3 название";
+$MESS["WZD_OPTION_21"] = "Навык 3 значение";
+$MESS["WZD_OPTION_22"] = "Навык 4";
+$MESS["WZD_OPTION_23"] = "Навык 4 название";
+$MESS["WZD_OPTION_24"] = "Навык 4 значение";
+$MESS["WZD_OPTION_25"] = "Навык 5";
+$MESS["WZD_OPTION_26"] = "Навык 5 название";
+$MESS["WZD_OPTION_27"] = "Навык 5 значение";
+$MESS["WZD_OPTION_28"] = "Подробно";
+$MESS["WZD_OPTION_29"] = "Информация";
+$MESS["WZD_OPTION_30"] = "Дополнительно";
+$MESS["WZD_OPTION_31"] = "Дополнительно";
+$MESS["WZD_OPTION_32"] = "Активность";
+$MESS["WZD_OPTION_33"] = "Сортировка";
+$MESS["WZD_OPTION_34"] = "*Символьный код";
+?>

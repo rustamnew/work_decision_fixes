@@ -1,0 +1,30 @@
+<?
+$MESS["WZD_OPTION_0"] = "Элемент";
+$MESS["WZD_OPTION_1"] = "*Название";
+$MESS["WZD_OPTION_2"] = "Изображение";
+$MESS["WZD_OPTION_3"] = "Иконка";
+$MESS["WZD_OPTION_4"] = "Отображать иконку";
+$MESS["WZD_OPTION_5"] = "Ссылка кнопки";
+$MESS["WZD_OPTION_6"] = "Текст кнопки";
+$MESS["WZD_OPTION_7"] = "Описание";
+$MESS["WZD_OPTION_8"] = "Показатели";
+$MESS["WZD_OPTION_9"] = "Показатель 1";
+$MESS["WZD_OPTION_10"] = "Показатель 1 - Заголовок";
+$MESS["WZD_OPTION_11"] = "Показатель 1 - Процент";
+$MESS["WZD_OPTION_12"] = "Показатель 2";
+$MESS["WZD_OPTION_13"] = "Показатель 2 - Заголовок";
+$MESS["WZD_OPTION_14"] = "Показатель 2 - Процент";
+$MESS["WZD_OPTION_15"] = "Показатель 3";
+$MESS["WZD_OPTION_16"] = "Показатель 3 - Заголовок";
+$MESS["WZD_OPTION_17"] = "Показатель 3 - Процент";
+$MESS["WZD_OPTION_18"] = "Показатель 4";
+$MESS["WZD_OPTION_19"] = "Показатель 4 - Заголовок";
+$MESS["WZD_OPTION_20"] = "Показатель 4 - Процент";
+$MESS["WZD_OPTION_21"] = "Показатель 5";
+$MESS["WZD_OPTION_22"] = "Показатель 5 - Заголовок";
+$MESS["WZD_OPTION_23"] = "Показатель 5 - Процент";
+$MESS["WZD_OPTION_24"] = "Дополнительно";
+$MESS["WZD_OPTION_25"] = "Активность";
+$MESS["WZD_OPTION_26"] = "Сортировка";
+$MESS["WZD_OPTION_27"] = "*Символьный код";
+?>
