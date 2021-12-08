@@ -13,6 +13,10 @@
 $this->setFrameMode(true);
 ?>
 
+<?
+$i = 0;
+?>
+
 <div class="careers py-100-70">
 	<div class="container">
 		<div class="row">
@@ -29,13 +33,42 @@ $this->setFrameMode(true);
 							<li class="active"><?echo FormatDateFromDB($arItem["DATE_ACTIVE_TO"], 'SHORT');?></li>
 							<li><?=$arItem["PROPERTIES"]["city"]["VALUE"];?></li>
 						</ul>
-						<div class="discounts-image">
-							<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="image">
-						</div>
+
+						<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?>
+							<div class="discounts-image">
+								<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="image">
+							</div>
+						<?endif;?>
+
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
+
+						<a class="testimonial-expand-button" data-fancybox data-src="#hidden-content<?=$i?>" href="javascript:;">
+							<?=GetMessage("BUTTON_DETAIL");?>
+						</a>
+
 						<a href="#" class="summonFormButton btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
+
+						<div class="item-careers_popup content_fancybox_modal" style="display: none;" id="hidden-content<?=$i?>">
+							<h4><a><?=$arItem["NAME"]?></a></h4>
+							<ul>
+								<li class="active"><?echo FormatDateFromDB($arItem["DATE_ACTIVE_TO"], 'SHORT');?></li>
+								<li><?=$arItem["PROPERTIES"]["city"]["VALUE"];?></li>
+							</ul>
+
+							<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?>
+								<div class="discounts-image">
+									<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="image">
+								</div>
+							<?endif;?>
+
+							<p><?=$arItem["PREVIEW_TEXT"]?></p>
+
+							<a href="#" class="summonFormButton btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
+						</div>
+
 					</div>
 				</div>
+				<?$i = $i + 1;?>
 			<?endforeach;?>	
 		</div>
 

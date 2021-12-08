@@ -3961,7 +3961,9 @@ section.provide .img-box .statistic-item-icon img{
     margin-bottom: 30px;
 }
 .careers .item-careers {
-    height: 100%
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .careers .item-careers ul {
@@ -4025,8 +4027,7 @@ section.provide .img-box .statistic-item-icon img{
     width: 100%;
 }
 .discounts__button:hover {
-    color: #C89D66 !important;
-
+    //color: #C89D66;
 }
 
 .active-dark-mode-decision .introduction-advisors {
@@ -4425,7 +4426,7 @@ section.provide .img-box .statistic-item-icon img{
     background-color: rgba(0, 0, 0, 0.8);
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.2s;
 }
 
 .summonedFormWrap.active {
@@ -4555,10 +4556,93 @@ h5 {
     font-size: 17px;
 }
 
-.career-detail-page .single-practice-areas-box {
+.single-practice-areas-box.career-detail-page  {
     display: flex;
     flex-direction: column;
 }
-.career-detail-page .single-practice-areas-box .summonFormButton.btn-1{
+.single-practice-areas-box.career-detail-page .summonFormButton.btn-1{
+    align-self: center;
+}
+
+.owl-testimonial-3 .box-item .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.owl-testimonial-3 .box-item .text-box .testimonial-expand-button{
+    color: #C89D66;
+    margin-top: 15px;
+}
+.owl-testimonial-3 .box-item .text-box .testimonial-expand-button:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+.content_fancybox_modal {
+    width: 45%;
+    border-radius: 5px;
+}
+
+.content_fancybox_modal.fancybox__content {
+    position: unset;
+}
+.content_fancybox_modal.fancybox__content button.carousel__button.is-close {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.testimonial_popup .clients-talk {
+    display: flex; 
+    flex-direction: column; 
+    align-items:center;
+}
+.testimonial_popup .clients-talk .img-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.testimonial_popup .info {
+    text-align: center;
+}
+
+.item-careers{
+    display: flex;
+    flex-direction: column;  
+}
+.item-careers_popup > h4 {
+    margin-bottom: 10px;    
+}
+
+.item-careers_popup .discounts-image img {
+    margin-bottom: 30px;
+}
+.item-careers_popup ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.item-careers_popup ul li {
+    white-space: nowrap;
+    margin-right: 10px;
+}
+.item-careers_popup ul li:last-child {
+    margin-right: 0;
+}
+.item-careers_popup ul li.active{
+    background-color: #C89D66;
+    padding: 2px 15px;
+    color: #FFF;
+    border-radius: 3px;
+}
+.item-careers_popup > p {
+    margin-bottom: 20px;
+}
+
+.testimonial-expand-button {
+    margin-bottom: 15px;
     align-self: center;
 }

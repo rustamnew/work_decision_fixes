@@ -19,6 +19,8 @@ $this->setFrameMode(true);
 		<li><?=$arResult["PROPERTIES"]["city"]["VALUE"];?></li>
 	</ul>
 	<p><?=$arResult["DETAIL_TEXT"]?></p>
+
+	<a class="summonFormButton btn-1 btn-2" href="/s2/"><?=GetMessage("SEND_RESPONSE")?></a>
 	
 	<?$APPLICATION->IncludeComponent(
 		"codekeepers:news.list.justice", 

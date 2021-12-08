@@ -1,80 +1,136 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("image", SITE_TEMPLATE_PATH."/assets/images/header/06_header.jpg");
-$APPLICATION->SetTitle("Контакты");
+$APPLICATION->SetTitle("РљРѕРЅС‚Р°РєС‚С‹");
 ?>
 
-<?$APPLICATION->IncludeComponent("codekeepers:news.list.justice", "contacts", Array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",	
-		"ADD_SECTIONS_CHAIN" => "N",	
-		"AJAX_MODE" => "N",	
-		"AJAX_OPTION_ADDITIONAL" => "",	
-		"AJAX_OPTION_HISTORY" => "N",	
-		"AJAX_OPTION_JUMP" => "N",	
-		"AJAX_OPTION_STYLE" => "N",	
-		"CACHE_FILTER" => "N",	
-		"CACHE_GROUPS" => "Y",	
-		"CACHE_TIME" => "36000000",	
-		"CACHE_TYPE" => "N",	
-		"CHECK_DATES" => "Y",	
-		"DETAIL_URL" => "",	
-		"DISPLAY_BOTTOM_PAGER" => "N",	
-		"DISPLAY_DATE" => "N",	
-		"DISPLAY_NAME" => "N",	
-		"DISPLAY_PICTURE" => "N",	
-		"DISPLAY_PREVIEW_TEXT" => "N",	
-		"DISPLAY_TOP_PAGER" => "N",	
-		"FIELD_CODE" => array(	
-			0 => "",
-			1 => "",
-		),
-		"FILTER_NAME" => "",	
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	
-		"IBLOCK_ID" => $GLOBALS["codekeepers_block_id"]["content_contacts_id"],	
-		"IBLOCK_TYPE" => "content",	
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	
-		"INCLUDE_SUBSECTIONS" => "N",	
-		"MESSAGE_404" => "",	
-		"NEWS_COUNT" => "1",	
-		"PAGER_BASE_LINK_ENABLE" => "N",	
-		"PAGER_DESC_NUMBERING" => "N",	
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	
-		"PAGER_SHOW_ALL" => "N",	
-		"PAGER_SHOW_ALWAYS" => "N",	
-		"PAGER_TEMPLATE" => ".default",	
-		"PAGER_TITLE" => "Новости",	
-		"PARENT_SECTION" => "",	
-		"PARENT_SECTION_CODE" => "",	
-		"PREVIEW_TRUNCATE_LEN" => "",	
-		"PROPERTY_CODE" => array(	
-			0 => "email",
-			1 => "address",
-			2 => "title1",
-			3 => "title2",
-			4 => "title_email",
-			5 => "title_address",
-			6 => "title_phone",
-			7 => "text",
-			8 => "phone",
-			9 => "[icon_phone]",
-			10 => "[icon_email]",
-			11 => "[icon_address]",
-			12 => "",
-		),
-		"SET_BROWSER_TITLE" => "N",	
-		"SET_LAST_MODIFIED" => "N",	
-		"SET_META_DESCRIPTION" => "N",	
-		"SET_META_KEYWORDS" => "N",	
-		"SET_STATUS_404" => "N",	
-		"SET_TITLE" => "N",	
-		"SHOW_404" => "N",	
-		"SORT_BY1" => "SORT",	
-		"SORT_BY2" => "",	
-		"SORT_ORDER1" => "ASC",	
-		"SORT_ORDER2" => "",	
-		"STRICT_SECTION_CHECK" => "N",	
-	),
-	false
-);?>
+<section class="flat-get-in-touch py-100" >
+    <div class="container">
+        <div class="wrap-get-in-touch">
+            <div class="get-in-touch">
+                <h2><?=$GLOBALS['global_info']['contacts_page_form_title'];?></h2>
+
+                <?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-contacts", Array(
+						"COMPONENT_TEMPLATE" => ".default",
+							"USE_CAPTCHA" => "Y",
+							"OK_TEXT" => GetMessage("FORM_OK_TEXT"),
+							"EMAIL_TO" => "3rustamnew3@gmail.com",	
+							"REQUIRED_FIELDS" => array(	
+								0 => "NAME",
+								1 => "EMAIL",
+							),
+							"EVENT_MESSAGE_ID" => "",
+							"SUBMIT_TEXT" => $GLOBALS['global_info']['text'],
+						),
+						false
+                );?>
+            </div>
+            <div class="contact-info">
+                <h2><?=$GLOBALS['global_info']['contacts_page_info_title'];?></h2>
+
+                <ul>
+                <?if($GLOBALS['global_info']['contacts_phone_show']):?>
+                    <li class="clearfix">
+                        <div class="wrap-icon">
+							<?$path = CFile::GetPath($GLOBALS['global_info']['icon_phone']);?>
+
+							<?if (stristr($path, '.svg')):?>
+								<?
+								$img_file = $path;
+
+								$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+								if($svg['id']){
+									$img_grup = $img_file.'#'.$svg['id'];
+								}
+
+								$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+								print_r($svg_file);?>
+							<?else:?>
+								<img src=<?=$path?>>
+							<?endif;?>
+                        </div>
+                        <div class="wrap-info">
+                            <h3><?=$GLOBALS['global_info']['title_phone'];?></h3>
+                            <p class="top"><?=$GLOBALS['global_info']['contacts_phone1'];?></p>
+                            <p class="bottom"><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
+                        </div>
+                    </li>
+                <?endif;?>
+
+                <?if($GLOBALS['global_info']['contacts_email_show']):?>
+                    <li class="clearfix">
+                        <div class="wrap-icon">
+							<?$path = CFile::GetPath($GLOBALS['global_info']['icon_email']);?>
+
+							<?if (stristr($path, '.svg')):?>
+								<?
+								$img_file = $path;
+
+								$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+								if($svg['id']){
+									$img_grup = $img_file.'#'.$svg['id'];
+								}
+
+								$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+								print_r($svg_file);?>
+							<?else:?>
+								<img src=<?=$path?>>
+							<?endif;?>
+                        </div>
+                        <div class="wrap-info">
+                            <h3><?=$GLOBALS['global_info']['title_email'];?></h3>
+                            <p class="top"><?=$GLOBALS['global_info']['contacts_email1'];?></p>
+                            <p class="bottom"><?=$GLOBALS['global_info']['contacts_email2'];?></p>
+                        </div>
+                    </li>
+                <?endif;?>
+
+                <?if($GLOBALS['global_info']['contacts_address_show']):?>
+                    <li class="clearfix">
+                        <div class="wrap-icon">
+							<?$path = CFile::GetPath($GLOBALS['global_info']['icon_address']);?>
+
+							<?if (stristr($path, '.svg')):?>
+								<?
+								$img_file = $path;
+
+								$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+								if($svg['id']){
+									$img_grup = $img_file.'#'.$svg['id'];
+								}
+
+								$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+								print_r($svg_file);?>
+							<?else:?>
+								<img src=<?=$path?>>
+							<?endif;?>
+                        </div>
+                        <div class="wrap-info">
+                            <h3><?=$GLOBALS['global_info']['title_address'];?></h3>
+                            <p class="top"><?=$GLOBALS['global_info']['contacts_address1'];?></p>
+                            <p class="bottom"><?=$GLOBALS['global_info']['contacts_address2'];?></p>
+                        </div>
+                    </li>
+                <?endif;?>
+                </ul>
+            </div>
+        </div>
+
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:map.yandex.view",
+            "",
+            Array(
+                "API_KEY" => "",
+                "CONTROLS" => array("ZOOM","MINIMAP","TYPECONTROL","SCALELINE"),
+                "INIT_MAP_TYPE" => "MAP",
+                "MAP_DATA" => "a:3:{s:10:\"yandex_lat\";s:7:\"55.7383\";s:10:\"yandex_lon\";s:7:\"37.5946\";s:12:\"yandex_scale\";i:10;}",
+                "MAP_HEIGHT" => "500",
+                "MAP_ID" => "",
+                "MAP_WIDTH" => "100%",
+                "OPTIONS" => array("ENABLE_SCROLL_ZOOM","ENABLE_DBLCLICK_ZOOM","ENABLE_DRAGGING")
+            )
+        );?>
+    </div>
+</section>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

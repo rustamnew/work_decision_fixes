@@ -34,7 +34,7 @@ if(CModule::IncludeModule('iblock')) {
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/bootstrap.min.css');?>
 
         <!-- :: Google Fonts -->
-        <?$APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");?>
+        <?$APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");?>
 
         <!-- :: Fontawesome -->
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/fonts/fontawesome/css/all.min.css');?>

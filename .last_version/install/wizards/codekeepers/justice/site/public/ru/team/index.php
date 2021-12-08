@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("ёристы");
 		"SET_TITLE" => "N",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"STRICT_SECTION_CHECK" => "N",
 		"DISPLAY_DATE" => "N",

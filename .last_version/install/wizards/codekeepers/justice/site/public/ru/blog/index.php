@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Блог");
 	"codekeepers:news.justice", 
 	"blog", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",

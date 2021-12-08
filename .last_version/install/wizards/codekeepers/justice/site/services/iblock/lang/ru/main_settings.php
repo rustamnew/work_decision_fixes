@@ -70,4 +70,16 @@ $MESS["WZD_OPTION_63"] = "Социальная сеть 5 Иконка";
 
 $MESS["WZD_OPTION_64"] = "Услуги";
 $MESS["WZD_OPTION_65"] = "Услуги - заголовок боковой панели";
+
+$MESS["WZD_OPTION_66"] = "Заголовок 1";
+$MESS["WZD_OPTION_67"] = "Заголовок 2";
+$MESS["WZD_OPTION_68"] = "Текст кнопки";
+$MESS["WZD_OPTION_69"] = "Заголовок Телефон";
+$MESS["WZD_OPTION_70"] = "Иконка Телефон";
+$MESS["WZD_OPTION_71"] = "Заголовок Email";
+$MESS["WZD_OPTION_72"] = "Иконка Email";
+$MESS["WZD_OPTION_73"] = "Заголовок Адрес";
+$MESS["WZD_OPTION_74"] = "Иконка Адрес";
+
+
 ?>

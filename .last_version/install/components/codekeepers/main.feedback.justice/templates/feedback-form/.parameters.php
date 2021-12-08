@@ -2,21 +2,21 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 $arTemplateParameters = array(
-
+/*
     "REQUIRED_FIELDS" => Array(
-            "NAME" => 'Îáÿçàòåëüíûå ïîëÿ', 
+            "NAME" => 'ÐžÐ±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ Ð¿Ð¾Ð»Ñ', 
             "TYPE"=>"LIST", 
             "MULTIPLE"=>"Y", 
             "VALUES" => Array(
-				"NONE_REQ" => '(âñå íåîáÿçàòåëüíûå)', 
-				"NAME" => 'Èìÿ', 
-				"PHONE" => "Òåëåôîí", 
-				"SUBJECT" => "Òåìà",
-				"MESSAGE" => "Ñîîáùåíèå"),
+				"NONE_REQ" => '(Ð²ÑÐµ Ð½ÐµÐ¾Ð±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ)', 
+				"NAME" => 'Ð˜Ð¼Ñ', 
+				"PHONE" => "Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½", 
+				"SUBJECT" => "Ð¢ÐµÐ¼Ð°",
+				"MESSAGE" => "Ð¡Ð¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ"),
             "DEFAULT"=>"", 
             "COLS"=>25, 
             "PARENT" => "BASE",
     ),
-
+*/
 );
 ?>

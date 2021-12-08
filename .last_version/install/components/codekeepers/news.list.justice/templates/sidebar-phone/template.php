@@ -23,25 +23,30 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 <?$path = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);?>
 
 
+<?if($arResult["ACTIVE"] == 'Y'):?>
+	<div class="call-back" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+		<div class="call-back-icon">
+			<?if (stristr($path, '.svg')):?>
+				<?
+				$img_file = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);
+				$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
+				if($svg['id']){
+					$img_grup = $img_file.'#'.$svg['id'];
+				}
+				$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
 
-<div class="call-back" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-	<div class="call-back-icon">
-		<?if (stristr($path, '.svg')):?>
-			<?
-			$img_file = CFile::GetPath($arItem['PROPERTIES']['icon']['VALUE']);
-			$svg = new SimpleXMLElement( file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file));
-			if($svg['id']){
-				$img_grup = $img_file.'#'.$svg['id'];
-			}
-			$svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$img_file);
+				print_r($svg_file);?>
+			<?else:?>
+				<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon"]["VALUE"]);?>>
+			<?endif;?>
+		</div>
+		<h5><?=$arItem["NAME"]?></h5>
 
-			print_r($svg_file);?>
-		<?else:?>
-			<img src=<?echo CFile::GetPath($arItem["PROPERTIES"]["icon"]["VALUE"]);?>>
+		<?if($GLOBALS['global_info']['contacts_phone_show']):?>
+			<p><?=$arItem["PROPERTIES"]["phone1"]["VALUE"];?></p>
+			<p><?=$arItem["PROPERTIES"]["phone2"]["VALUE"];?></p>
 		<?endif;?>
+
+		<?if($GLOBALS['global_info']['contacts_phone_show']):?><a href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>" class="<?if($arItem['PROPERTIES']['summonForm']['VALUE'] == 'Y'):?>summonFormButton<?endif;?>btn-1 btn-3"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a><?endif;?>
 	</div>
-	<h5><?=$arItem["NAME"]?></h5>
-	<p><?=$arItem["PROPERTIES"]["phone1"]["VALUE"];?></p>
-	<p><?=$arItem["PROPERTIES"]["phone2"]["VALUE"];?></p>
-	<a href="<?=SITE_DIR.$arItem["PROPERTIES"]["url"]["VALUE"];?>" class="btn-1 btn-3"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
-</div>
+<?endif;?>

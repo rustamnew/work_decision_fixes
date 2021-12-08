@@ -12,7 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<?
+$i = 0;
+?>
 <section class="testimonial py-100">
 	<div class="container">
 		<div class="row">
@@ -29,6 +31,10 @@ $this->setFrameMode(true);
 				<div class="box-item">
 					<div class="text-box">
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
+
+						<a class="testimonial-expand-button" data-fancybox data-src="#hidden-content<?=$i?>" href="javascript:;">
+							<?=GetMessage("BUTTON_DETAIL");?>
+						</a>
 					</div>
 					<div class="clients-talk">
 						<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?>
@@ -42,7 +48,26 @@ $this->setFrameMode(true);
 							<span><?=$arItem["PROPERTIES"]["position"]["VALUE"];?></span>
 						</div>
 					</div>
+
+					<div class="testimonial_popup content_fancybox_modal" style="display: none;" id="hidden-content<?=$i?>">
+						<div class="text-box">
+							<p><?=$arItem["PREVIEW_TEXT"]?></p>
+						</div>
+						<div class="clients-talk">
+							<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?>
+								<div class="img-box">
+									<img class="img-fluid" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="01 Testimonials">
+								</div>
+							<?endif;?>
+							
+							<div class="info">
+								<h5><?=$arItem["NAME"]?></h5>
+								<span><?=$arItem["PROPERTIES"]["position"]["VALUE"];?></span>
+							</div>
+						</div>
+					</div>
 				</div>
+				<?$i = $i + 1;?>
 			<?endforeach;?>	
 		</div>
 	</div>
