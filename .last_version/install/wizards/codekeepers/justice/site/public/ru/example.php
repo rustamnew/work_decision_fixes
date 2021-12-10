@@ -3,15 +3,15 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/urlrewrite.
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-$APPLICATION->SetTitle("РџСЂРёРјРµСЂ СЃСЃС‹Р»РєРё");?>
+$APPLICATION->SetTitle("Пример ссылки");?>
 
 <section class="page-404-area">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 offset-md-2 text-center">
-				<h2>РџСЂРёРјРµСЂ СЃСЃС‹Р»РєРё</h2>
-				<p>РўРµСЃС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р° РґР»СЏ РїСЂРѕРІРµСЂРєРё РїРµСЂРµС…РѕРґР° РїРѕ СЃСЃС‹Р»РєР°Рј</p>
-				<a href="<?=SITE_DIR?>" class="btn-1">Р’РµСЂРЅСѓС‚СЊСЃСЏ РЅР° РіР»Р°РІРЅСѓСЋ</a>
+				<h2>Пример ссылки</h2>
+				<p>Тестовая страница для проверки перехода по ссылкам</p>
+				<a href="<?=SITE_DIR?>" class="btn-1">Вернуться на главную</a>
 			</div>
 		</div>
 	</div>

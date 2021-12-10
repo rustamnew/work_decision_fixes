@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 	$max_length = 30;
 
 	foreach($string_array as $item) {
-		if (iconv_strlen($string_done . $item) < 30) {
+		if (iconv_strlen($string_done . $item) < $max_length) {
 			if ($string_done) {
 				$string_done .=", " . $item;
 			} else {
@@ -44,13 +44,13 @@ $this->setFrameMode(true);
 						<li><a><?=$string_done;?></a></li>
 					</ul>
 				<?endif;?>
-				<?if($arResult["IBLOCK"]["CODE"] == 'projects'):?>
+				<?if($arResult["IBLOCK_SECTION_ID"]):?>
 					<ul>
 						<li>
 							<?
 							$res = CIBlockSection::GetByID($arResult["IBLOCK_SECTION_ID"]);
 							if($ar_res = $res->GetNext()) {?>
-								<a href="<?=SITE_DIR.$ar_res["SECTION_PAGE_URL"];?>"><?echo $ar_res["NAME"];?></a>
+								<a href="<?=$ar_res["SECTION_PAGE_URL"];?>"><?echo $ar_res["NAME"];?></a>
 							<?}?>
 						</li>
 					</ul>

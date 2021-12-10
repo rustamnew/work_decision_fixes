@@ -1400,7 +1400,7 @@ header.navs.active{
 
 /* :: Practice Area */
 .practice-area{
-    background-color: #F9F9F9;
+    //background-color: #F9F9F9;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1715,7 +1715,7 @@ header.navs.active{
     position: relative;
     overflow: hidden;
     border-radius: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .case-study-item span{
     position: absolute;
@@ -3269,7 +3269,7 @@ header.navs.active{
     padding: 100px 0;
 }
 .page-404-area h2{
-    font-size: 250px;
+    font-size: 80px;
     color: #343434;
     font-weight: bold;
     line-height: 1.2;
@@ -3448,7 +3448,7 @@ body.active-dark-mode-decision,
     color: #F9F9F9;
 }
 
-.active-dark-mode-decision .practice-area,
+//.active-dark-mode-decision .practice-area,
 .active-dark-mode-decision .quote .box,
 .active-dark-mode-decision .provide .text-box,
 .active-dark-mode-decision .statistic-owl,
@@ -3688,12 +3688,32 @@ div.bx-component-opener {
 .services-section-item {
     display: flex;
     border: 1px solid #e6e6e6;
-    padding: 12px;
+    padding: 30px 12px 12px 12px;
     margin-bottom: 24px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
 }
 .services-section-item .item-image{
-    margin-right: 20px;
+    margin-right: 0;
 }
+
+
+@media (min-width: 576px) {
+    .services-section-item {
+        flex-direction: row;
+        align-items: unset;
+        padding-top: unset;
+        border: 1px solid #e6e6e6;
+        padding: 12px;
+        margin-bottom: 24px;
+    }
+    .services-section-item .item-image{
+        margin-right: 20px;
+    }
+}
+
+
 .services-section-item img {
     height: 160px;
 }
@@ -4144,13 +4164,6 @@ section.provide .img-box .statistic-item-icon img{
     margin-bottom: 5px;
     font-size: 16px;
 }
-.footer-title h4{
-    //color: #FFF;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
 .footer a {
     color: #F4F4F4;
 }
@@ -4429,6 +4442,8 @@ section.provide .img-box .statistic-item-icon img{
     transition: visibility 0s, opacity 0.2s;
 }
 
+
+
 .summonedFormWrap.active {
     left: 0;
     display: flex;
@@ -4454,11 +4469,19 @@ section.provide .img-box .statistic-item-icon img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px 10px 50px;
     background-color: #ffffff;
     border-radius: 5px;
-    width: 70%;
     max-width: 510px;
+
+    width: 82%;
+    padding: 25px;
+}
+
+@media (min-width: 576px) {
+    .summonedForm { 
+        width: 70%;
+        padding: 30px 10px 50px;
+    }
 }
 
 
@@ -4562,6 +4585,7 @@ h5 {
 }
 .single-practice-areas-box.career-detail-page .summonFormButton.btn-1{
     align-self: center;
+    white-space: nowrap;
 }
 
 .owl-testimonial-3 .box-item .text-box {
@@ -4645,4 +4669,101 @@ h5 {
 .testimonial-expand-button {
     margin-bottom: 15px;
     align-self: center;
+}
+
+.practice-area-item:hover .content ul li::before {
+    background-color: #FFF;
+}
+
+.summonedFormWrap .mf-captcha {
+    display: flex;
+    width: 90%;
+}
+
+.summonedFormWrap .captcha_col {
+    flex: 1;
+}
+
+
+
+
+.copyright > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.copyright > .container ul.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.copyright > .container ul.links li {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.copyright ul.links li a {
+    text-align: center;
+}
+
+
+
+.footer-title h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.footer .row .col-sm-6 {
+    margin-bottom: 25px;
+}
+
+.footer .row .col-sm-12 .footer-title {
+    margin-bottom: 15px;
+}
+
+
+@media (min-width: 576px) {
+    .copyright > .container {
+        flex-direction: unset;
+    }
+
+    .copyright > .container ul.links {
+        display: unset;
+        flex-direction: unset;
+        align-items: unset;
+    }
+
+    .copyright > .container ul.links li {
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+
+    .copyright ul.links li a {
+        text-align: unset;
+    }
+
+    
+    .footer-title h4 {
+        margin-bottom: 25px;
+    }
+
+    .footer .row .col-sm-6 {
+        margin-bottom: 0;
+    }
+
+    .footer .row .col-sm-12 .footer-title {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.projects-owl-wrap .text-box a {
+    color: #262B3E;
+}
+.projects-owl-wrap .text-box a:hover {
+    color: #C89D66;
 }

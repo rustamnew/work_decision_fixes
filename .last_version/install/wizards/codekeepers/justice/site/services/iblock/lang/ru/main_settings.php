@@ -80,6 +80,7 @@ $MESS["WZD_OPTION_71"] = "Заголовок Email";
 $MESS["WZD_OPTION_72"] = "Иконка Email";
 $MESS["WZD_OPTION_73"] = "Заголовок Адрес";
 $MESS["WZD_OPTION_74"] = "Иконка Адрес";
+$MESS["WZD_OPTION_75"] = "Страница Контакты";
 
-
+$MESS["WZD_OPTION_76"] = "Хедер - Кнопка магазина";
 ?>

@@ -283,7 +283,7 @@
 
 /* :: Dark Mode */
 @media (max-width: 991px){
-    .nav-bar.active .logo .open-nav-bar span {
+    .dark-mode-decision .nav-bar.active .logo .open-nav-bar span {
         background-color: #FFF;
     }
 }

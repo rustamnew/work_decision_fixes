@@ -1,14 +1,14 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("image", SITE_TEMPLATE_PATH."/assets/images/header/06_header.jpg");
-$APPLICATION->SetTitle("Контакты");
+$APPLICATION->SetTitle("��������");
 ?>
 
 <section class="flat-get-in-touch py-100" >
     <div class="container">
         <div class="wrap-get-in-touch">
             <div class="get-in-touch">
-                <h2><?=$GLOBALS['global_info']['contacts_page_form_title'];?></h2>
+                <h2><?=$GLOBALS['global_info']['title1'];?></h2>
 
                 <?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-contacts", Array(
 						"COMPONENT_TEMPLATE" => ".default",
@@ -26,7 +26,7 @@ $APPLICATION->SetTitle("Контакты");
                 );?>
             </div>
             <div class="contact-info">
-                <h2><?=$GLOBALS['global_info']['contacts_page_info_title'];?></h2>
+                <h2><?=$GLOBALS['global_info']['title2'];?></h2>
 
                 <ul>
                 <?if($GLOBALS['global_info']['contacts_phone_show']):?>

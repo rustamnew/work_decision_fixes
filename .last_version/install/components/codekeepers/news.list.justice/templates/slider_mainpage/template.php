@@ -153,7 +153,7 @@ $this->setFrameMode(true);
                     </div>
                 </div>
 			<?endif;?>
-			<?if($arItem["PROPERTIES"]["center"]["VALUE"] == "Да"):?>
+			<?if($arItem["PROPERTIES"]["center"]["VALUE"] == "Y"):?>
 				<div class="sec-hero display-table" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)">
 					<div class="table-cell">
 						<div class="overlay"></div>

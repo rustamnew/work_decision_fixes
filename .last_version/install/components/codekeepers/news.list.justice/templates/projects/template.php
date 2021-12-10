@@ -32,27 +32,38 @@ $this->setFrameMode(true);
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 				?>
 
-				<div class="case-study-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-					<span></span>
-					<div class="img-box">
-						<img class="img-fluid gallery-item-img" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="01 Case Study">
-					</div>
-					<div class="hover-box">
-						<div class="text-box">
-							<div class="tags">
-								<?
-								$res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
-								if($ar_res = $res->GetNext()) {?>
-									<a href="<?=$ar_res["SECTION_PAGE_URL"]?>"><?=$ar_res["NAME"];?></a></li>
-								
-								<?}
-								?>
-							</div>
+				<div class="projects-owl-wrap">
+					<div class="case-study-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+						<span></span>
+						<div class="img-box">
+							<img class="img-fluid gallery-item-img" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="01 Case Study">
+						</div>
+						<div class="hover-box">
+							<div class="text-box">
+								<div class="tags">
+									<?
+									$res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
+									if($ar_res = $res->GetNext()) {?>
+										<a href="<?=$ar_res["SECTION_PAGE_URL"]?>"><?=$ar_res["NAME"];?></a></li>
+									
+									<?}
+									?>
+								</div>
 
-							<h4><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h4>
+								<h4><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h4>
+							</div>
 						</div>
 					</div>
+
+					<div class="text-box text-center">
+						<a href="/s2/team/vladimir-vasilevich/"><h5><?=$arItem["NAME"]?></h5></a>
+						<?$res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
+						if($ar_res = $res->GetNext()) {?>
+							<a href="<?=$ar_res["SECTION_PAGE_URL"]?>"><?=$ar_res["NAME"];?></a></li>
+						<?}?>
+					</div>
 				</div>
+
 			<?endforeach;?>
 		</div>
 	</div>

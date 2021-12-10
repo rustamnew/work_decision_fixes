@@ -125,6 +125,10 @@ if(CModule::IncludeModule('iblock')) {
                                     <li><a class="icon open-menu" href="#"><i class="fas fa-th"></i></a></li>
                                 <?endif;?>
 
+                                <?if($GLOBALS['global_info']['header_shop_show']):?>
+                                    <li><a class="icon open-menu" href="<?SITE_DIR.'/shop'?>"><i class="fas fa-shopping-cart"></i></a></li>
+                                <?endif;?>
+
                                 <?if($GLOBALS['global_info']['header_button_show']):?>
                                     <li>
                                         <a class="summonFormButton btn-1 btn-2" href="<?=SITE_DIR?>">
@@ -180,7 +184,7 @@ if(CModule::IncludeModule('iblock')) {
                                     <?endif;?>
                                 </a>
 
-                                <a href="#open-nav-bar-menu" class="open-nav-bar">
+                                <a href="#open-nav-bar-menu" class="open-nav-bar" id="open-nav-bar">
                                     <span></span>
                                     <span></span>
                                     <span></span>
