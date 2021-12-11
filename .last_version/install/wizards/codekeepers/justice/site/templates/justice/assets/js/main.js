@@ -50,10 +50,11 @@
     });
 
 
-    /////
+    ///// close on click outside menu
     $(document).click(function (e){ 
         let button = $("#open-nav-bar");
-        if (!button.is(e.target) && button.has(e.target).length === 0) {
+        let menu = $("#open-nav-bar-menu")
+        if (  (!button.is(e.target) && button.has(e.target).length === 0) && (!menu.is(e.target) && menu.has(e.target).length === 0)   ) {
             $menuLink.removeClass('active');
             $navbarMenu.removeClass('active');
         }
@@ -381,10 +382,11 @@
     });
 
     // :: Counter Up Js
+    /*
     $('.counter').counterUp({
         delay: 10,
         time: 1000
-    });
+    });*/
     
     // :: Add Dark Mode
     $('.dark-mode-decision').on('click', function () {

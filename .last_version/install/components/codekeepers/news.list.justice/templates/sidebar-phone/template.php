@@ -47,6 +47,6 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 			<p><?=$GLOBALS['global_info']['contacts_phone2'];?></p>
 		<?endif;?>
 
-		<a href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>" class="<?if($arItem['PROPERTIES']['popup']['VALUE'] == 'Y'):?>summonFormButton<?endif;?>btn-1 btn-3"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+		<a href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>" class="<?if($arItem['PROPERTIES']['popup']['VALUE'] == 'Y'):?>summonFormButton <?endif;?>btn-1 btn-3"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
 	</div>
 <?endif;?>

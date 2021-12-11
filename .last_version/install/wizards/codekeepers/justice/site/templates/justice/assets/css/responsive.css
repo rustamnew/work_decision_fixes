@@ -45,9 +45,9 @@
         background-color: #FFF;
         display: block;
     }
-    .nav-bar.active .logo .open-nav-bar span{
+    /*.nav-bar.active .logo .open-nav-bar span{
         background-color: #262B3E;
-    }
+    }*/
     .nav-bar .logo .open-nav-bar:hover span,
     .nav-bar .logo .open-nav-bar.active span{
         background-color: #C9B38C;
@@ -58,12 +58,13 @@
     .nav-bar .nav-bar-link.active{
         display: block;
         border-top: 1px solid rgb(34, 34, 34, 0.1);
-        max-height: 300px;
         overflow: hidden;
         overflow-y: scroll;
         -webkit-box-shadow: 0 3px 4px rgba(0,0,0,.07);
                 box-shadow: 0 3px 4px rgba(0,0,0,.07);
         background-color: #262B3E;
+
+        padding-bottom: 15px;
     }
     .nav-bar .nav-bar-link > ul > li{
         display: block;
