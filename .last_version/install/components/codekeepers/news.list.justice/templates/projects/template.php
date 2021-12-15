@@ -56,10 +56,10 @@ $this->setFrameMode(true);
 					</div>
 
 					<div class="text-box text-center">
-						<a href="/s2/team/vladimir-vasilevich/"><h5><?=$arItem["NAME"]?></h5></a>
+						<a href="/s2/team/vladimir-vasilevich/" class="projects-owl-item-title"><h5><?=$arItem["NAME"]?></h5></a>
 						<?$res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
 						if($ar_res = $res->GetNext()) {?>
-							<a href="<?=$ar_res["SECTION_PAGE_URL"]?>"><?=$ar_res["NAME"];?></a></li>
+							<a href="<?=$ar_res["SECTION_PAGE_URL"]?>" class="projects-owl-item-subtitle"><?=$ar_res["NAME"];?></a></li>
 						<?}?>
 					</div>
 				</div>

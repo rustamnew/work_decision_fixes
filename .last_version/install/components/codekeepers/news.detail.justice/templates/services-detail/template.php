@@ -15,9 +15,16 @@ $this->setFrameMode(true);
 
 
 <div class="single-practice-areas-box">
-	<img class="img-fluid" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="01 Blog">
+	<div class="img-box">
+		<img class="img-fluid" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="01 Blog">
+		<ul>
+			<li><a href="">от 3000р</a></li>
+		</ul>
+	</div>
 	<h3><?=$arResult["NAME"]?></h3>
 	<p class="services-detail-text"><?=$arResult["DETAIL_TEXT"]?></p>
+
+	<a class="summonFormButton btn-1 btn-2" href="/s2/">Заказать звонок</a>
 	
 	<?$APPLICATION->IncludeComponent(
 		"codekeepers:news.list.justice", 

@@ -27,7 +27,7 @@ $this->setFrameMode(true);
 						<div class="item-img">
 							<img class="img-fluid" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="01 Shop">
 							<div class="box-more d-flex align-items-center">
-								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn-1"><?echo GetMessage("ADD_TO_CART")?></a>
+								<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn-1"><?echo GetMessage("DETAIL")?></a>
 							</div>
 						</div>
 						<div class="item-text text-center">

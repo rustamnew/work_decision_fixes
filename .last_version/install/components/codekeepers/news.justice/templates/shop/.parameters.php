@@ -25,6 +25,14 @@ $arTemplateParameters = array(
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
 	),
+
+	"SHOW_SECTION" => array(
+		"NAME" => GetMessage("SHOW_SECTION"),
+		"TYPE" => "CHECKBOX",
+		"MULTIPLE" => "N",
+		"VALUE" => "Y",
+		"DEFAULT" => "",
+	),
 );
 
 if ($arCurrentValues["USE_SHARE"] == "Y")

@@ -530,19 +530,23 @@ if (buttonInfo) {
     })
 }
 
+
+
+
 //открытие формы
 let summonButtons = document.querySelectorAll('.summonFormButton')
-let formWrap = document.querySelector('#summonedFormWrap')
+
 summonButtons.forEach((item) => {
     item.addEventListener('click', (e) => {
         e.preventDefault()
+        let formWrap = document.querySelector('#summonedFormWrap')
         formWrap.classList.add('active')
     })
 })
 
-
-
 //Закрытие формы
+let formWrap = document.querySelector('#summonedFormWrap')
+
 let closeFancybox = (e) => {
     e.preventDefault()
     formWrap.classList.remove('active')

@@ -13,17 +13,8 @@
 $this->setFrameMode(true);
 ?>
 
-<?$iblock_id = $arParams["IBLOCK_ID"];?>
-
-<?
-$this->AddEditAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['EDIT_LINK'], CIBlock::GetArrayByID($arResult["ITEMS"][0]["IBLOCK_ID"], "ELEMENT_EDIT"));
-$this->AddDeleteAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['DELETE_LINK'], CIBlock::GetArrayByID($arResult["ITEMS"][0]["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-?>
-
-
-
-<section class="practice-area py-100-70" >
-	<div class="container" id="<?=$this->GetEditAreaId($arResult["ITEMS"][0]['ID']);?>">
+<section class="practice-area py-100-70 services-section-block" >
+	<div class="container">
 		<div class="row" >
 			<div class="col-md-8 offset-md-2">
 				<div class="sec-title text-center">
@@ -35,6 +26,8 @@ $this->AddDeleteAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['DELET
 		</div>
 		<div class="row">
 			<?
+
+			$iblock_id = $arParams["IBLOCK_ID"];
 			$arSelect = array("UF_*");
 			$arFilter = Array('IBLOCK_ID'=>$iblock_id, 'GLOBAL_ACTIVE'=>'Y');
 			$list = CIBlockSection::GetList(Array("SORT"=>"ASC"), $arFilter, true, $arSelect);
@@ -55,7 +48,7 @@ $this->AddDeleteAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['DELET
 				<?endif;?>
 
 				<div class="col-md-6 col-lg-4">
-					<div class="practice-area-item">
+					<div class="practice-area-item services-section-block-item">
 						<?if (stristr($path, '.svg')):?>
 							<div class="practice-area-image">
 								<?print_r($svg_file);?>
@@ -70,14 +63,15 @@ $this->AddDeleteAction($arResult["ITEMS"][0]['ID'], $arResult["ITEMS"][0]['DELET
 							<h4><?=$ar_result["NAME"]?></h4>
 							<ul>
 								<?
+								$count = 0;
 								$arSelect = Array("ID", "NAME", "DETAIL_PAGE_URL", "EDIT_LINK", "DELETE_LINK");
 								$arFilter = Array("IBLOCK_ID"=>$iblock_id, "IBLOCK_SECTION_ID"=> $ar_result["ID"],"GLOBAL_ACTIVE"=>"Y");
 								$res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter, false, false, $arSelect);
 
-								while($ob = $res->GetNextElement()) {
-									$arFields = $ob->GetFields();?>
+								while($ob = $res->GetNextElement() and $count < $arParams["NEWS_COUNT"]) {
+									$arFields = $ob->GetFields();
+									$count = $count + 1;?>
 									<li><a href="<?=$arFields["DETAIL_PAGE_URL"]?>"><?=$arFields["NAME"]?></a></li>
-									
 								<?}?>
 							</ul>
 							<a href="<?=$section_link;?>"><?echo GetMessage("READ_MORE")?></a>

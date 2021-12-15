@@ -42,10 +42,10 @@ $this->setFrameMode(true);
 					$string = $arItem["TAGS"];
 					$string_array = explode(', ', $string);
 					$string_done = "";
-					$max_length = 30;
+					$max_length = 60;
 
 					foreach($string_array as $item) {
-						if (iconv_strlen($string_done . $item) < 30) {
+						if (iconv_strlen($string_done . $item) < $max_length) {
 							if ($string_done) {
 								$string_done .=", " . $item;
 							} else {

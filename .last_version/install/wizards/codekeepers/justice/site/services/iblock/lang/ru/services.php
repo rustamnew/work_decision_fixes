@@ -12,4 +12,8 @@ $MESS["WZD_OPTION_9"] = "Активность";
 $MESS["WZD_OPTION_10"] = "Сортировка";
 $MESS["WZD_OPTION_11"] = "*Символьный код";
 $MESS["WZD_OPTION_12"] = "Детальная картинка";
+
+$MESS["WZD_OPTION_13"] = "Юристы";
+$MESS["WZD_OPTION_14"] = "Отзывы";
+$MESS["WZD_OPTION_15"] = "Акции";
 ?>

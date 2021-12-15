@@ -96,7 +96,7 @@ $this->setFrameMode(true);
 						"SORT" => "CNT",
 						"PAGE_ELEMENTS" => "15",
 						"PERIOD" => "",
-						"URL_SEARCH" => "/search/index.php",
+						"URL_SEARCH" => "",
 						"TAGS_INHERIT" => "Y",
 						"CHECK_DATES" => "Y",
 						"FILTER_NAME" => "",

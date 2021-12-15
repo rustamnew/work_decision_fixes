@@ -14,19 +14,17 @@ $this->setFrameMode(true);
 ?>
 <section class="faqs py-100-70">
 	<div class="container">
-		<div class="sec-title">
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<div class="sec-title text-center">
-						<h2><?=$arParams["NAME"]?></h2>
-						<h3><?=$arParams["TITLE"];?></h3>
-						<p><?=$arParams["SUBTITLE"]?></p>
-					</div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="sec-title text-center">
+					<h2><?=$arParams["NAME"]?></h2>
+					<h3><?=$arParams["TITLE"];?></h3>
+					<p><?=$arParams["SUBTITLE"]?></p>
 				</div>
 			</div>
 		</div>
+	
 		<div class="row faq" id="faqSite">
-
 			<?if($arParams["EXPAND"] == 'Y'):?>
 				<div class="col">
 				<?$i = 0;?>

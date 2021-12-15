@@ -89,8 +89,8 @@ $APPLICATION->SetTitle("Магазин");
 		"MESSAGE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "",
-			"detail" => "#ELEMENT_CODE#/",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 		)
 	),
 	false

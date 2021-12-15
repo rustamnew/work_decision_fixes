@@ -26,7 +26,7 @@ $this->setFrameMode(true);
 						</a>
 
 						<div class="item-text text-center">
-							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="open-item-shop"><h4><?=$arItem["NAME"]?></h4></a>
+							<a href="<?=$arItem["SECTION_PAGE_URL"]?>" class="open-item-shop"><h4><?=$arItem["NAME"]?></h4></a>
 						</div>
 					</div>
 				</div>

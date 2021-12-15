@@ -249,20 +249,25 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
 
         
-        <?$APPLICATION->IncludeComponent(
-            "codekeepers:main.feedback.justice", 
-            "feedback-form-popup", 
-            array(
-                "USE_CAPTCHA" => "Y",
-                "OK_TEXT" => GetMessage("FORM_OK_TEXT"),
-                "EMAIL_TO" => "3rustamnew3@gmail.com",	
-                "REQUIRED_FIELDS" => array(	
-                    0 => "NAME",
+            <?$APPLICATION->IncludeComponent(
+                "codekeepers:main.feedback.justice", 
+                "feedback-form-popup", 
+                array(
+                    "AJAX_MODE" => "Y",
+                    "AJAX_OPTION_SHADOW" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    
+                    "USE_CAPTCHA" => "Y",
+                    "OK_TEXT" => GetMessage("FORM_OK_TEXT"),
+                    "EMAIL_TO" => "3rustamnew3@gmail.com",	
+                    "REQUIRED_FIELDS" => array(	
+                        0 => "NAME",
+                    ),
+                    "EVENT_MESSAGE_ID" => "",
                 ),
-                "EVENT_MESSAGE_ID" => "",
-            ),
-            false
-        );?>
+                false
+            );?>
         
 
         <!-- :: jQuery JS -->

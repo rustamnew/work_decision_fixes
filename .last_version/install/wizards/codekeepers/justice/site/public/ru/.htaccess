@@ -1,5 +1,5 @@
 Options -Indexes 
-ErrorDocument 404 /404.php
+ErrorDocument 404 #SITE_DIR#/404.php
 
 <IfModule mod_php.c>
   php_flag session.use_trans_sid off

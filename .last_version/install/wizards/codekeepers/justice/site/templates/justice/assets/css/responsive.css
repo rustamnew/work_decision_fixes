@@ -45,9 +45,9 @@
         background-color: #FFF;
         display: block;
     }
-    /*.nav-bar.active .logo .open-nav-bar span{
+    .nav-bar.active .logo .open-nav-bar span{
         background-color: #262B3E;
-    }*/
+    }
     .nav-bar .logo .open-nav-bar:hover span,
     .nav-bar .logo .open-nav-bar.active span{
         background-color: #C9B38C;

@@ -237,6 +237,14 @@ class FinishStep extends CFinishWizardStep
 		$iblockXMLFile = $_SERVER["DOCUMENT_ROOT"].WIZARD_SITE_DIR."stock\index.php"; 
 		CWizardUtil::ReplaceMacros($iblockXMLFile, array("SITE_DIR" => WIZARD_SITE_DIR));
 
+
+		
+		$iblockXMLFile = $_SERVER["DOCUMENT_ROOT"].WIZARD_SITE_DIR.".htaccess"; 
+		CWizardUtil::ReplaceMacros($iblockXMLFile, array("SITE_DIR" => WIZARD_SITE_DIR));
+
+
+
+
 		$FORM_ID_PHP_VALUE = $DB->Query("SELECT MAX(ID) FROM b_event_message");
 		$FORM_ID_PREM=$FORM_ID_PHP_VALUE->GetNext();
 		$FORM_ID = (int)$FORM_ID_PREM["MAX(ID)"] + 1;
