@@ -85,7 +85,7 @@ $dbProperty = CIBlockProperty::GetList(array(), array("IBLOCK_ID" => $iblockID))
 	while($arProp = $dbProperty->Fetch())
 	$arProperty[$arProp["CODE"]] = $arProp["ID"];
 
-	CUserOptions::SetOption("form", "form_element_".$iblockID, array("tabs" => 'edit1--#--'.GetMessage("WZD_OPTION_0").'--,--PREVIEW_PICTURE--#--'.GetMessage("WZD_OPTION_1").'--,--NAME--#--'.GetMessage("WZD_OPTION_2").'--,--PROPERTY_'.$arProperty["position"].'--#--'.GetMessage("WZD_OPTION_3").'--,--PREVIEW_TEXT--#--'.GetMessage("WZD_OPTION_4").'--;--cedit1--#--'.GetMessage("WZD_OPTION_5").'--,--ACTIVE--#--'.GetMessage("WZD_OPTION_6").'--,--SORT--#--'.GetMessage("WZD_OPTION_7").'--,--CODE--#--'.GetMessage("WZD_OPTION_8").'--;--";}'));
+	CUserOptions::SetOption("form", "form_element_".$iblockID, array("tabs" => 'edit1--#--'.GetMessage("WZD_OPTION_0").'--,--PREVIEW_PICTURE--#--'.GetMessage("WZD_OPTION_1").'--,--NAME--#--'.GetMessage("WZD_OPTION_2").'--,--PROPERTY_'.$arProperty["position"].'--#--'.GetMessage("WZD_OPTION_3").'--,--PREVIEW_TEXT--#--'.GetMessage("WZD_OPTION_4").'--,--DETAIL_TEXT--#--'.GetMessage("WZD_OPTION_9").'--;--cedit1--#--'.GetMessage("WZD_OPTION_5").'--,--ACTIVE--#--'.GetMessage("WZD_OPTION_6").'--,--SORT--#--'.GetMessage("WZD_OPTION_7").'--,--CODE--#--'.GetMessage("WZD_OPTION_8").'--;--";}'));
 
 CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/include/iblock_id_link.php", array("REVIEWS_IBLOCK_ID" => $iblockID));
 

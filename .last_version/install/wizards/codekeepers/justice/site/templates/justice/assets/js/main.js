@@ -62,13 +62,13 @@
     /////
 
     // :: Scroll Smooth To Go Section
-    $('.move-section').on('click', function (e) {
+    /*$('.move-section').on('click', function (e) {
         e.preventDefault();
         var anchorLink = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchorLink.attr('href')).offset().top + 1
         }, 1000);
-    });
+    });*/
 
     // :: Add Class Active To Search Box
     $('.open-search-box').on('click', function () {
@@ -202,6 +202,25 @@
             }
         }
     });
+    $('.owl-advisors-2').owlCarousel({
+        loop: false,
+        margin: 30,
+        smartSpeed: 1000,
+        autoplay: 2000,
+        nav: false,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        touchDrag: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            }
+        }
+    });
 
     // :: OWL Carousel Js Partners
     $('.owl-partners').owlCarousel({
@@ -331,7 +350,7 @@
         }
     });
     $('.owl-testimonial-3').owlCarousel({
-        loop: true,
+        loop: false,
         nav: false,
         dots: false,
         autoplay: true,
@@ -351,6 +370,49 @@
             },
             991: {
                 items: 3
+            }
+        }
+    });
+    $('.owl-testimonial-2').owlCarousel({
+        loop: false,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 1000,
+        margin: 10,
+        center: true,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        touchDrag: true,
+        items: 1,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            }
+        }
+    });
+    $('.owl-promo-2').owlCarousel({
+        loop: false,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 1000,
+        margin: 10,
+        center: false,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        touchDrag: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
             }
         }
     });

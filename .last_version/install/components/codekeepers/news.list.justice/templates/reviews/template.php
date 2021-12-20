@@ -32,7 +32,7 @@ $i = 0;
 					<div class="text-box">
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
 
-						<a class="testimonial-expand-button" data-fancybox data-src="#hidden-content<?=$i?>" href="javascript:;">
+						<a class="testimonial-expand-button" data-fancybox data-src="#hidden-content-reviews<?=$i?>" href="javascript:;">
 							<?=GetMessage("BUTTON_DETAIL");?>
 						</a>
 					</div>
@@ -49,9 +49,9 @@ $i = 0;
 						</div>
 					</div>
 
-					<div class="testimonial_popup content_fancybox_modal" style="display: none;" id="hidden-content<?=$i?>">
+					<div class="testimonial_popup content_fancybox_modal" style="display: none;" id="hidden-content-reviews<?=$i?>">
 						<div class="text-box">
-							<p><?=$arItem["PREVIEW_TEXT"]?></p>
+							<p><?=$arItem["DETAIL_TEXT"]?></p>
 						</div>
 						<div class="clients-talk">
 							<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?>

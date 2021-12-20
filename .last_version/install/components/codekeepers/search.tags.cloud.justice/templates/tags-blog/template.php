@@ -21,13 +21,7 @@ $this->setFrameMode(true);
 		<div class="tags">
 			<ul>
 				<?foreach ($arResult["SEARCH"] as $key => $res):?>
-
-					<?$url = SITE_DIR.$res["URL"];
-					if(strpos($url, '//') !== false) {
-						$url = str_replace('//', '/', $url);
-					}?>
-
-					<li><a href="<?=$url?>"><?=$res["NAME"]?></a></li>
+					<li><a href="<?=$res["URL"]?>"><?=$res["NAME"]?></a></li>
 				<?endforeach;?>
 			</ul>
 		</div>

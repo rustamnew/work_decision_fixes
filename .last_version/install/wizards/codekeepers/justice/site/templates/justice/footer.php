@@ -248,7 +248,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
         </div>
 
-        
+        <div class="summonedFormWrap" id="summonedFormWrap">
             <?$APPLICATION->IncludeComponent(
                 "codekeepers:main.feedback.justice", 
                 "feedback-form-popup", 
@@ -260,7 +260,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     
                     "USE_CAPTCHA" => "Y",
                     "OK_TEXT" => GetMessage("FORM_OK_TEXT"),
-                    "EMAIL_TO" => "3rustamnew3@gmail.com",	
+	
                     "REQUIRED_FIELDS" => array(	
                         0 => "NAME",
                     ),
@@ -268,7 +268,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 ),
                 false
             );?>
-        
+        </div>
 
         <!-- :: jQuery JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery-3.5.1.min.js')?>"></script>

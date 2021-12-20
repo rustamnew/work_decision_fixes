@@ -28,7 +28,7 @@ $this->setFrameMode(true);
 									<div class="headline-top"><?=$arItem["NAME"]?></div>
 									<h1 class="handline"><?=$arItem["PREVIEW_TEXT"]?></h1>
 									<p class="about-website"><?=$arItem["DETAIL_TEXT"]?></p>
-									<a class="<?if(!$arItem["PROPERTIES"]["url"]["VALUE"]):?>summonFormButton <?endif;?>btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+									<a class="<?if(!$arItem["PROPERTIES"]["url"]["VALUE"]):?>summonFormButton <?endif;?>btn-1 btn-2" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
                                 </div>
                                 <?if($arItem["PROPERTIES"]["teasers_show"]["VALUE"]):?>
 									<div class="services-header text-right">
@@ -62,7 +62,7 @@ $this->setFrameMode(true);
 											<?endif;?>
 
 											<?if($arItem["PROPERTIES"]["teaser2_show"]["VALUE"]):?>
-												<a href="<?=SITE_DIR.$arItem["PROPERTIES"]["teaser2_url"]["VALUE"]?>">
+												<a href="<?=$arItem["PROPERTIES"]["teaser2_url"]["VALUE"]?>">
 													<div class="services-item">
 														<?if($arItem["PROPERTIES"]["teaser2_icon"]["VALUE"]):?>
 															<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser2_icon']['VALUE']);?>
@@ -91,7 +91,7 @@ $this->setFrameMode(true);
 										</div>
 										<div class="line">
 											<?if($arItem["PROPERTIES"]["teaser3_show"]["VALUE"]):?>
-												<a href="<?=SITE_DIR.$arItem["PROPERTIES"]["teaser3_url"]["VALUE"]?>">
+												<a href="<?=$arItem["PROPERTIES"]["teaser3_url"]["VALUE"]?>">
 													<div class="services-item">
 														<?if($arItem["PROPERTIES"]["teaser3_icon"]["VALUE"]):?>
 															<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser3_icon']['VALUE']);?>
@@ -119,7 +119,7 @@ $this->setFrameMode(true);
 											<?endif;?>
 
 											<?if($arItem["PROPERTIES"]["teaser4_show"]["VALUE"]):?>
-												<a href="<?=SITE_DIR.$arItem["PROPERTIES"]["teaser4_url"]["VALUE"]?>">
+												<a href="<?=$arItem["PROPERTIES"]["teaser4_url"]["VALUE"]?>">
 													<div class="services-item">
 														<?if($arItem["PROPERTIES"]["teaser4_icon"]["VALUE"]):?>
 															<?$path = CFile::GetPath($arItem['PROPERTIES']['teaser4_icon']['VALUE']);?>
@@ -165,7 +165,7 @@ $this->setFrameMode(true);
 											<div class="headline-top"><?=$arItem["NAME"]?></div>
 											<h1 class="handline"><?=$arItem["PREVIEW_TEXT"]?></h1>
 											<p class="about-website"><?=$arItem["DETAIL_TEXT"]?></p>
-											<a class="btn-1 btn-2 move-section" href="<?=SITE_DIR.$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+											<a class="btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
 										</div>
 									</div>
 								</div>

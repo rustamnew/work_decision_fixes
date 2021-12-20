@@ -97,7 +97,7 @@ $this->setFrameMode(true);
 						"PAGE_ELEMENTS" => "15",
 						"PERIOD" => "",
 						"URL_SEARCH" => "",
-						"TAGS_INHERIT" => "Y",
+						"TAGS_INHERIT" => "N",
 						"CHECK_DATES" => "Y",
 						"FILTER_NAME" => "",
 						"arrFILTER" => array(

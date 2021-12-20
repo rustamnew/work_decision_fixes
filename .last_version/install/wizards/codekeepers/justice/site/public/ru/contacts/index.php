@@ -12,9 +12,12 @@ $APPLICATION->SetTitle("Контакты");
 
                 <?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-contacts", Array(
 						"COMPONENT_TEMPLATE" => ".default",
+                        "AJAX_MODE" => "Y",
+                        "AJAX_OPTION_SHADOW" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_HISTORY" => "N",
 							"USE_CAPTCHA" => "Y",
-							"OK_TEXT" => GetMessage("FORM_OK_TEXT"),
-							"EMAIL_TO" => "3rustamnew3@gmail.com",	
+							"OK_TEXT" => GetMessage("FORM_OK_TEXT"),	
 							"REQUIRED_FIELDS" => array(	
 								0 => "NAME",
 								1 => "EMAIL",

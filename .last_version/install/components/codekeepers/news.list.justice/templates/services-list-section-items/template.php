@@ -28,8 +28,8 @@ $this->setFrameMode(true);
 			
 			<div class="item-content">
 				<h5><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h5>
+				<a class="btn-service-price">от 3000р</a>
 				<p><?=$arItem["PREVIEW_TEXT"]?></p>
-				<a href="" class="btn-1 btn-service-price">от 3000р</a>
 			</div>
 		</li>
 	<?endforeach;?>	

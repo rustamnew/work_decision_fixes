@@ -33,7 +33,6 @@ $arServices = Array(
 			"partners.php",
 			"projects.php",
 			"reviews.php",
-			"services.php",
 			"sidebar-phone.php",
 			"stats.php",
 			"team.php",
@@ -41,6 +40,7 @@ $arServices = Array(
 			"timeline-block.php",
 			"vacancies.php",
 			"why-us.php",
+			"services.php",
 		),
 	),
 );

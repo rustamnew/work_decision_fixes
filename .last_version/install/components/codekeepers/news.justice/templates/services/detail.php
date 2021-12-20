@@ -17,9 +17,9 @@ $this->setFrameMode(true);
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="single-practice-areas-head">
-					<h4>
+					<h3>
 						<?=$GLOBALS["global_info"]["services_sidebar_title"];?>
-					</h4>
+					</h3>
 				</div>
 				<?$APPLICATION->IncludeComponent("codekeepers:catalog.section.list.justice", "sidebar-section-list", Array(
 					"ADD_SECTIONS_CHAIN" => "Y",	

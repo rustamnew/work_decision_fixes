@@ -54,13 +54,13 @@ $i = 0;
 
 						<p><?=$arItem["PREVIEW_TEXT"]?></p>
 
-						<a class="testimonial-expand-button" data-fancybox data-src="#hidden-content<?=$i?>" href="javascript:;">
+						<a class="testimonial-expand-button" data-fancybox data-src="#hidden-content-discounts<?=$i?>" href="javascript:;">
 							<?=GetMessage("BUTTON_DETAIL");?>
 						</a>
 
 						<a href="#" class="summonFormButton btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
 
-						<div class="item-careers_popup content_fancybox_modal" style="display: none;" id="hidden-content<?=$i?>">
+						<div class="item-careers_popup content_fancybox_modal" style="display: none;" id="hidden-content-discounts<?=$i?>">
 							<h4><a><?=$arItem["NAME"]?></a></h4>
 							<ul>
 								<li class="active"><?echo FormatDateFromDB($arItem["DATE_ACTIVE_TO"], 'SHORT');?></li>
@@ -73,7 +73,7 @@ $i = 0;
 								</div>
 							<?endif;?>
 
-							<p><?=$arItem["PREVIEW_TEXT"]?></p>
+							<p><?=$arItem["DETAIL_TEXT"]?></p>
 
 							<a href="#" class="summonFormButton btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
 						</div>

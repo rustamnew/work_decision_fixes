@@ -8,4 +8,5 @@ $MESS["WZD_OPTION_5"] = "Дополнительно";
 $MESS["WZD_OPTION_6"] = "Активность";
 $MESS["WZD_OPTION_7"] = "Сортировка описание";
 $MESS["WZD_OPTION_8"] = "*Символьный код";
+$MESS["WZD_OPTION_9"] = "Ссылка";
 ?>
