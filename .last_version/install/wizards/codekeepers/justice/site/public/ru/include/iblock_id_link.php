@@ -23,6 +23,7 @@ $GLOBALS["codekeepers_block_id"] = array(
     'content_contacts_id' => '#CONTACTS_IBLOCK_ID#',
     'content_discounts_id' => '#DISCOUNTS_IBLOCK_ID#',
     'content_timeline-block_id' => '#TIMELINE-BLOCK_IBLOCK_ID#',
+    'settings_messengers_id' => '#MESSENGERS_IBLOCK_ID#',
     'settings_main_id' => '#MAIN_SETTINGS_IBLOCK_ID#',
     'settings_main_element_id' => '#MAIN_SETTINGS_ELEMENT_ID#',
 )

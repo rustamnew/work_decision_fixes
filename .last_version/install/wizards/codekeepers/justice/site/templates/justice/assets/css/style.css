@@ -1622,7 +1622,7 @@ header.navs.active{
     margin-left: 10px;
 }
 .quote .box .quote-box .sec-title{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .quote .box .quote-box .sec-title h3{
     color: #262B3E;
@@ -5043,4 +5043,20 @@ h5 {
 
 .fixed-messenger-buttons .messenger-item {
     margin-top: 20px;
+}
+
+
+.mf-ok-text {
+    color: green;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.quote-box .mf-ok-text {
+    margin-bottom: 10px;
+}
+
+.contact-form .mf-ok-text {
+    margin-top: 10px;
+    font-size: 18px;
 }

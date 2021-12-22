@@ -18,6 +18,7 @@ $arServices = Array(
 		"STAGES" => Array(
 			"types.php", //IBlock types
 			"main_settings.php",
+			"messengers.php",
 			"about.php",
 			"banner_main.php",
 			"blog.php",

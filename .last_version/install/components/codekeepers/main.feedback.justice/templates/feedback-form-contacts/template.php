@@ -19,10 +19,6 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 	{
 		foreach($arResult["ERROR_MESSAGE"] as $v)
 			ShowError($v);
-	}
-	if($arResult["OK_MESSAGE"] <> '')
-	{
-		?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
 	}?>
 
 	<input type="text" name="user_name" value="" class=" name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
@@ -40,6 +36,8 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 			<input type="text" name="captcha_word" size="30" maxlength="50" value="">
 		</div>
 	<?endif;?>
+
+	<div class="mf-ok-text">&nbsp;<?=$arResult["OK_MESSAGE"]?></div>
 
 	<div class="wrap-submit submit-form">
 		<div class="wrap-btn">

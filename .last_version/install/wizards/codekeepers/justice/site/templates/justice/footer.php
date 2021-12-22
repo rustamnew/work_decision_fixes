@@ -248,6 +248,62 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
         </div>
 
+
+        <?$APPLICATION->IncludeComponent(
+            "codekeepers:news.list.justice", 
+            "messengers_fixed", 
+            array(
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "N",
+                "DISPLAY_DATE" => "N",
+                "DISPLAY_NAME" => "N",
+                "DISPLAY_PICTURE" => "N",
+                "DISPLAY_PREVIEW_TEXT" => "N",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+
+                "IBLOCK_ID" => $GLOBALS["codekeepers_block_id"]["settings_messengers_id"],
+                "IBLOCK_TYPE" => "settings",
+                "MESSAGE_404" => "",
+                
+                "NEWS_COUNT" => "10",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PROPERTY_CODE" => array(
+                    0 => "url",
+                    1 => "color_background",
+                    2 => "color_icon",
+                    3 => "[icon]",
+                ),
+                "SET_BROWSER_TITLE" => "N",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "N",
+                "SET_META_KEYWORDS" => "N",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "N",
+            ),
+            false
+        );?>
+
         <div class="summonedFormWrap" id="summonedFormWrap">
             <?$APPLICATION->IncludeComponent(
                 "codekeepers:main.feedback.justice", 
@@ -268,6 +324,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 ),
                 false
             );?>
+        </div>
+
+        <div class="success-icon" id="success-icon">
+            <img class="success-icon__icon animate__animated animate__bounceInUp" id="success-icon__icon" src="<?=SITE_TEMPLATE_PATH?>/assets/images/icons/success.svg" alt="icon">
         </div>
 
         <!-- :: jQuery JS -->

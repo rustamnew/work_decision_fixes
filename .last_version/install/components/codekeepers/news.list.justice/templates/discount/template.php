@@ -27,33 +27,33 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 	<div class="container" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 		<div class="row" style="justify-content: center">
 			<div class="col-lg-6">
-
 				<div class="subscribe">
-
 					<div class="sec-title">
 						<h3><?=$arItem["NAME"]?></h3>
 					</div>
 
-					<?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-short", Array(
-						"AJAX_MODE" => "Y",
-						"AJAX_OPTION_SHADOW" => "N",
-						"AJAX_OPTION_JUMP" => "N",
-						"AJAX_OPTION_HISTORY" => "N",
-						"COMPONENT_TEMPLATE" => ".default",
-						"USE_CAPTCHA" => "Y",
-						"OK_TEXT" => GetMessage("FORM_OK_TEXT"),
-						"REQUIRED_FIELDS" => array(	
-							0 => "NAME",
-							1 => "EMAIL",
-						),
-						"EVENT_MESSAGE_ID" => "",
-						"SUBMIT_TEXT" => $arItem["PROPERTIES"]["text"]["VALUE"],
-						),
-						false
-					);?>
-
+					<div class="form-short-wrap">
+						<?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-short", Array(
+							"AJAX_MODE" => "Y",
+							"AJAX_OPTION_SHADOW" => "N",
+							"AJAX_OPTION_JUMP" => "N",
+							"AJAX_OPTION_HISTORY" => "N",
+							"AJAX_OPTION_STYLE" => "Y",
+							"CACHE_TYPE" => "N",
+							"COMPONENT_TEMPLATE" => ".default",
+							"USE_CAPTCHA" => "Y",
+							"OK_TEXT" => GetMessage("FORM_OK_TEXT"),
+							"REQUIRED_FIELDS" => array(	
+								0 => "NAME",
+								1 => "EMAIL",
+							),
+							"EVENT_MESSAGE_ID" => "",
+							"SUBMIT_TEXT" => $arItem["PROPERTIES"]["text"]["VALUE"],
+							),
+							false
+						);?>
+					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

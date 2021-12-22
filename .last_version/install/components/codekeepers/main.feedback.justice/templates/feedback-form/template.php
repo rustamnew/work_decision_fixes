@@ -15,12 +15,11 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 {
 	foreach($arResult["ERROR_MESSAGE"] as $v)
 		ShowError($v);
-}
-if($arResult["OK_MESSAGE"] <> '')
-{
-	?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
-}
-?>
+}?>
+
+
+<div class="mf-ok-text">&nbsp;<?=$arResult["OK_MESSAGE"]?></div>
+
 
 <form action="<?=POST_FORM_ACTION_URI?>" method="POST">
 	<?=bitrix_sessid_post()?>
@@ -59,6 +58,11 @@ if($arResult["OK_MESSAGE"] <> '')
 		<div class="col-md-12">
 			<div class="quote-item">
 				<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
+
+				<input type="hidden" name="FORM_PAGE" value="<?=$arParams["FORM_PAGE"]?>">
+				<input type="hidden" name="FORM_SECTION" value="<?=$arParams["FORM_SECTION"]?>">
+				<input type="hidden" name="FORM_TYPE" value="<?=$arParams["FORM_TYPE"]?>">
+				
 				<input type="submit" name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="btn-1">
 			</div>
 		</div>

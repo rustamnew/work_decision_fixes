@@ -19,13 +19,9 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 		if(!empty($arResult["ERROR_MESSAGE"])) {
 			foreach($arResult["ERROR_MESSAGE"] as $v)
 				ShowError($v);
-		}
-
-		if($arResult["OK_MESSAGE"] <> '') {
-			?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
-		}
+		}?>
 		
-	?>
+		<div class="mf-ok-text">&nbsp;<?=$arResult["OK_MESSAGE"]?></div>
 	
 	<input class="summonedFormInputName" type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
 	<input class="summonedFormInputEmail" type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>

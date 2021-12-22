@@ -128,7 +128,7 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
                                 <?endif;?>
 
                                 <?if($GLOBALS['global_info']['header_shop_show']):?>
-                                    <li><a class="icon" href="<?=SITE_DIR?>/shop"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a class="icon" href="<?=SITE_DIR?>shop"><i class="fas fa-shopping-cart"></i></a></li>
                                 <?endif;?>
 
                                 <?if($GLOBALS['global_info']['header_button_show']):?>

@@ -13,39 +13,41 @@
 $this->setFrameMode(true);
 ?>
 
-<div class="fixed-messenger-buttons">
-    <ul>
-        <?foreach($arResult["ITEMS"] as $arItem):?>
-            <?if($arItem["PROPERTIES"]["icon"]["VALUE"]):?>
-                <?
-                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-                $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-                ?>
+<?if($arParams["LIST_SHOW"]):?>
+    <div class="fixed-messenger-buttons">
+        <ul>
+            <?foreach($arResult["ITEMS"] as $arItem):?>
+                <?if($arItem["PROPERTIES"]["icon"]["VALUE"]):?>
+                    <?
+                    $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+                    $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                    ?>
 
-                <li class="messenger-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                    <a href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>">
-                        <?$path = CFile::GetPath($arItem["PROPERTIES"]["icon"]["VALUE"]);?>
-                        <?if (stristr($path, '.svg')):?>
-                            <?
+                    <li class="messenger-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+                        <a href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>">
+                            <?$path = CFile::GetPath($arItem["PROPERTIES"]["icon"]["VALUE"]);?>
+                            <?if (stristr($path, '.svg')):?>
+                                <?
 
-                            $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$path);
-							$svg_file = trim($svg_file);
-							$color = $arItem["PROPERTIES"]["color_icon"]["VALUE"];
-							$background = $arItem["PROPERTIES"]["color_background"]["VALUE"];
-							$style =  ' fill='.$color.' style="background-color:'.$background.'"';
-							$pos = 4;
-							$test = substr_replace($svg_file, $style, $pos, 0);
+                                $svg_file = file_get_contents( $_SERVER["DOCUMENT_ROOT"].$path);
+                                $svg_file = trim($svg_file);
+                                $color = $arItem["PROPERTIES"]["color_icon"]["VALUE"];
+                                $background = $arItem["PROPERTIES"]["color_background"]["VALUE"];
+                                $style =  ' fill='.$color.' style="background-color:'.$background.'"';
+                                $pos = 4;
+                                $test = substr_replace($svg_file, $style, $pos, 0);
 
-							print_r($test);;
+                                print_r($test);;
 
-                            //print_r($svg_file);
-                            ?>
-                        <?else:?>
-                            <img src=<?echo $path;?> style=" fill: <?=$arItem["PROPERTIES"]["color_icon"]["VALUE"];?>; background-color: <?=$arItem["PROPERTIES"]["color_background"]["VALUE"];?>;">
-                        <?endif;?>
-                    </a>
-                </li>
-            <?endif;?>
-        <?endforeach;?>	
-    </ul>
-</div>
+                                //print_r($svg_file);
+                                ?>
+                            <?else:?>
+                                <img src=<?echo $path;?> style=" fill: <?=$arItem["PROPERTIES"]["color_icon"]["VALUE"];?>; background-color: <?=$arItem["PROPERTIES"]["color_background"]["VALUE"];?>;">
+                            <?endif;?>
+                        </a>
+                    </li>
+                <?endif;?>
+            <?endforeach;?>	
+        </ul>
+    </div>
+<?endif;?>
