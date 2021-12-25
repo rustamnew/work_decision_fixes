@@ -244,7 +244,10 @@ $APPLICATION->SetTitle("О компании");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "discount"
+		"COMPONENT_TEMPLATE" => "discount",
+		"FORM_PAGE" => "О компании",
+		"FORM_SECTION" => "-",
+		"FORM_TYPE" => "Форма с акцией",
 	),
 	false
 );?>

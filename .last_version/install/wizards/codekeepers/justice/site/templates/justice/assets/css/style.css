@@ -3779,7 +3779,7 @@ div.bx-component-opener {
 }
 @media (min-width: 768px) {
     .services-section-item .item-image {  
-    width: 35%;
+        max-width: 240px;
     }
 }
 
@@ -4921,11 +4921,11 @@ h5 {
         width: 50%;
     }
 }
-@media (max-width: 400px) {
+/*@media (max-width: 400px) {
     .services-section-item {
         width: 80%;
     }
-}
+}*/
 @media (max-width: 320px) {
     .services-section-item {
         width: 100%;
@@ -4991,7 +4991,7 @@ h5 {
 
 .single-practice-areas-head h3 {
     color: #262B3E;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 600;
 }
 
@@ -5059,4 +5059,93 @@ h5 {
 .contact-form .mf-ok-text {
     margin-top: 10px;
     font-size: 18px;
+}
+
+
+
+
+
+
+.success-icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+}
+
+.success-icon.active {
+    left: 0;
+    display: flex;
+}
+
+.success-icon__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    width: 40%;
+    height: 40%;
+    max-width: 500px;
+    min-height: 350px;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animate__bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .bolg.py-100.section,
+    .single-bolg.py-100-70.section {
+        padding-top: 50px;
+    }
+
+    .bolg.py-100.section col-lg-8,
+    .single-bolg.py-100-70.section col-lg-8{
+        margin-bottom: 80px;
+    }
+
+    .bolg.py-100.section row,
+    .single-bolg.py-100-70.section row {
+        flex-direction: column-reverse;  
+    }
+}
+
+
+.testimonial_popup .img-fluid{
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-header {
+        padding-bottom: 50px;
+        padding-top: calc(80px + 30px);
+    }
+    .breadcrumb-header .banner h1 {
+        font-size: 40px;
+    }
 }

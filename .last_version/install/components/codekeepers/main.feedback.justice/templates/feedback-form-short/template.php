@@ -19,14 +19,14 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 	if($arResult["OK_MESSAGE"] <> '')
 	{?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?}?>
 
-	<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
+	<form action="<?=POST_FORM_ACTION_URI?>" method="POST" id="feedback-form-short">
 		<?=bitrix_sessid_post()?>
 		<div class="subscribe-item">
 			<input type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
 		</div>
 
 		<div class="subscribe-item">
-			<input type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
+			<input type="text" name="user_phone" placeholder="<?echo GetMessage("YOUR_PHONE")?>" required>
 		</div>
 
 		<div class="subscribe-item">
@@ -47,6 +47,11 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 
 		<div class="subscribe-item">
 			<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
+
+			<input type="hidden" name="FORM_PAGE" value="<?=$arParams["FORM_PAGE"]?>">
+			<input type="hidden" name="FORM_SECTION" value="<?=$arParams["FORM_SECTION"]?>">
+			<input type="hidden" name="FORM_TYPE" value="<?=$arParams["FORM_TYPE"]?>">
+			
 			<input type="submit" name="submit" value="<?=$arParams['SUBMIT_TEXT']?>" class="btn-1">
 		</div>
 	</form>

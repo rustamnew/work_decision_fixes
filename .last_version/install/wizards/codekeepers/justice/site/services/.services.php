@@ -42,6 +42,7 @@ $arServices = Array(
 			"vacancies.php",
 			"why-us.php",
 			"services.php",
+			"feedback.php",
 		),
 	),
 );

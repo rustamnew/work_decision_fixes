@@ -811,9 +811,6 @@ $APPLICATION->SetTitle('Главная');
 			1 => "",
 		),
 		"FILTER_NAME" => "",
-		"FORM_PHONE" => "+7 (800) 0000-000",
-		"FORM_SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг.",
-		"FORM_TITLE" => "Оставьте заявку",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => $GLOBALS["codekeepers_block_id"]["content_timeline-block_id"],
 		"IBLOCK_TYPE" => "content",
@@ -849,6 +846,9 @@ $APPLICATION->SetTitle('Главная');
 		"SORT_ORDER1" => "ASC",
 		"SORT_ORDER2" => "DESC",
 		"STRICT_SECTION_CHECK" => "N",
+		"FORM_PAGE" => "Главная",
+		"FORM_SECTION" => "-",
+		"FORM_TYPE" => "Основная",
 	),
 	false
 );?>

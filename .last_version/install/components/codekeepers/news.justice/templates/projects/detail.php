@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<section class="single-bolg py-100-70">
+<section class="single-bolg py-100-70 section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">

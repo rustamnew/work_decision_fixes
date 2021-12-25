@@ -36,6 +36,13 @@ $arTypes = Array(
 		"SORT" => 5,
 		"LANG" => Array(),
 	),
+	Array(
+		"ID" => "requests",
+		"SECTIONS" => "Y",
+		"IN_RSS" => "N",
+		"SORT" => 6,
+		"LANG" => Array(),
+	),
 	
 );
 

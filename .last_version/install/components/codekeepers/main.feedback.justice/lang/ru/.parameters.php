@@ -7,5 +7,6 @@ $MESS ['MFP_REQUIRED_FIELDS'] = "Обязательные поля для заполнения";
 $MESS ['MFP_ALL_REQ'] = "(все необязательные)";
 $MESS ['MFP_NAME'] = "Имя";
 $MESS ['MFP_MESSAGE'] = "Сообщение";
+$MESS ['MFP_PHONE'] = "Телефон";
 $MESS ['MFP_EMAIL_TEMPLATES'] = "Почтовые шаблоны для отправки письма";
 ?>

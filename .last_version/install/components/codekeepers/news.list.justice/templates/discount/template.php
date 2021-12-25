@@ -43,12 +43,16 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 							"COMPONENT_TEMPLATE" => ".default",
 							"USE_CAPTCHA" => "Y",
 							"OK_TEXT" => GetMessage("FORM_OK_TEXT"),
-							"REQUIRED_FIELDS" => array(	
+							"REQUIRED_FIELDS" => array(
 								0 => "NAME",
-								1 => "EMAIL",
+								1 => "PHONE",
+								2 => "MESSAGE",
 							),
 							"EVENT_MESSAGE_ID" => "",
 							"SUBMIT_TEXT" => $arItem["PROPERTIES"]["text"]["VALUE"],
+							"FORM_PAGE" => $arParams["FORM_PAGE"],
+							"FORM_SECTION" => $arParams["FORM_SECTION"],
+							"FORM_TYPE" => $arParams["FORM_TYPE"],
 							),
 							false
 						);?>

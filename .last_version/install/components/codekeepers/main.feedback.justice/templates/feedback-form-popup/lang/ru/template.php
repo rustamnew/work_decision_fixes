@@ -7,6 +7,7 @@ $MESS ['MFT_CAPTCHA_CODE'] = "Введите слово на картинке";
 $MESS ['MFT_SUBMIT'] = "Отправить";
 $MESS ['YOUR_NAME'] = "Ваше имя";
 $MESS ['YOUR_EMAIL'] = "Ваш Email";
+$MESS ['YOUR_PHONE'] = "Ваш телефон";
 $MESS ['YOUR_MESSAGE'] = "Сообщение";
 $MESS ['FORM_SUBTITLE'] = "Оставьте заявку и мы перезвоним Вам в ближайшее время!";
 $MESS ['ENTER_CODE'] = "Код с картинки";

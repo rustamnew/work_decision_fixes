@@ -253,7 +253,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             "codekeepers:news.list.justice", 
             "messengers_fixed", 
             array(
-                "ADD_SECTIONS_CHAIN" => "Y",
+                "ADD_SECTIONS_CHAIN" => "N",
                 "AJAX_MODE" => "N",
                 "AJAX_OPTION_ADDITIONAL" => "",
                 "AJAX_OPTION_HISTORY" => "N",
@@ -277,11 +277,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 ),
                 "FILTER_NAME" => "",
                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-
                 "IBLOCK_ID" => $GLOBALS["codekeepers_block_id"]["settings_messengers_id"],
                 "IBLOCK_TYPE" => "settings",
                 "MESSAGE_404" => "",
-                
                 "NEWS_COUNT" => "10",
                 "PAGER_BASE_LINK_ENABLE" => "N",
                 "PAGER_DESC_NUMBERING" => "N",
@@ -293,6 +291,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     1 => "color_background",
                     2 => "color_icon",
                     3 => "[icon]",
+                    4 => "",
                 ),
                 "SET_BROWSER_TITLE" => "N",
                 "SET_LAST_MODIFIED" => "N",
@@ -300,6 +299,23 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "SET_META_KEYWORDS" => "N",
                 "SET_STATUS_404" => "N",
                 "SET_TITLE" => "N",
+                "COMPONENT_TEMPLATE" => "messengers_fixed",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_ORDER1" => "DESC",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER2" => "ASC",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "STRICT_SECTION_CHECK" => "N",
+                "LIST_POSITION" => "TOP_LEFT",
+                "LIST_SHOW" => "N",
+                "PAGER_TITLE" => "Новости",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "SHOW_404" => "N"
             ),
             false
         );?>
@@ -317,10 +333,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     "USE_CAPTCHA" => "Y",
                     "OK_TEXT" => GetMessage("FORM_OK_TEXT"),
 	
-                    "REQUIRED_FIELDS" => array(	
+                    "REQUIRED_FIELDS" => array(
                         0 => "NAME",
+                        1 => "PHONE",
+                        2 => "MESSAGE",
                     ),
                     "EVENT_MESSAGE_ID" => "",
+                    "FORM_TYPE" => "Всплывающая форма"
                 ),
                 false
             );?>

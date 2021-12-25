@@ -1,0 +1,4 @@
+INSERT INTO `b_event_message` (`ID`, `TIMESTAMP_X`, `EVENT_NAME`, `LID`, `ACTIVE`, `EMAIL_FROM`, `EMAIL_TO`, `SUBJECT`, `MESSAGE`, `MESSAGE_PHP`, `BODY_TYPE`, `BCC`, `REPLY_TO`, `CC`, `IN_REPLY_TO`, `PRIORITY`, `FIELD1_NAME`, `FIELD1_VALUE`, `FIELD2_NAME`, `FIELD2_VALUE`, `SITE_TEMPLATE_ID`, `ADDITIONAL_FIELD`, `LANGUAGE_ID`) VALUES 
+(form_id, '2021-07-18 19:23:19', 'FEEDBACK_FORM', 'site_id', 'Y', '#from_mail#', '#admin_mail#', 'Письмо через форму обратной связи', 'Телефон: #user_phone#\r\nУдобная дата: #profile_data#\r\nВремя: #profile_time#\r\nСпециалист: #profile_select#', 'Телефон: <?=$arParams[\'profile_phone\'];?>\r\n\r\nУдобная дата: <?=$arParams[\'profile_data\'];?>\r\n\r\nВремя: <?=$arParams[\'profile_time\'];?>\r\n\r\nСпециалист: <?=$arParams[\'profile_select\'];?>', 'text', '', '', '', '', '', '', '', '', '', '', 'a:0:{}', '');
+
+INSERT INTO `b_event_message_site` (`EVENT_MESSAGE_ID`, `SITE_ID`) VALUES (form_id, 'site_id');

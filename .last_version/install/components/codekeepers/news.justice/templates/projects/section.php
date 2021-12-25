@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
-<section class="bolg py-100">
+<section class="bolg py-100 section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">

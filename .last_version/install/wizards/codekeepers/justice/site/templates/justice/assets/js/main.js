@@ -489,29 +489,100 @@ $(document).ready(function () {
     $("#feedback-form").submit(function (e) {
         e.preventDefault()
 
-       $.ajax({
-        url: $(this).attr("action"),
-        //data: $(this).serialize(),
-        data: {
-            Name : 'Petr'
-        },
-        type: 'POST',
-        dataType: "json",
+        $.ajax({
+            url: $(this).attr("action"),
+            data: $(this).serialize() + "&submit=Отправить",
+            type: 'POST',
+            
+            //dataType: "json",
 
-        success: function (data) {
-            summonedSuccess.classList.add('active')
-        },
-        error: function (data) {
-           console.log(data);
-           
-        }
-     });
+            success: function (data) {
+                summonedSuccess.classList.add('active')
+                $("#feedback-form")[0].reset();
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $("#feedback-form-popup").submit(function (e) {
+        e.preventDefault()
+
+        $.ajax({
+            url: $(this).attr("action"),
+            data: $(this).serialize() + "&submit=Отправить",
+            type: 'POST',
+
+            //dataType: "json",
+
+            success: function (data) {
+                summonedSuccess.classList.add('active')
+                $("#feedback-form-popup")[0].reset();
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $("#feedback-form-contacts").submit(function (e) {
+        e.preventDefault()
+
+        $.ajax({
+            url: $(this).attr("action"),
+            data: $(this).serialize() + "&submit=Отправить",
+            type: 'POST',
+
+            //dataType: "json",
+
+            success: function (data) {
+                summonedSuccess.classList.add('active')
+                $("#feedback-form-contacts")[0].reset();
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $("#feedback-form-short").submit(function (e) {
+        e.preventDefault()
+
+        $.ajax({
+            url: $(this).attr("action"),
+            data: $(this).serialize() + "&submit=Отправить",
+            type: 'POST',
+
+            //dataType: "json",
+
+            success: function (data) {
+                summonedSuccess.classList.add('active')
+                $("#feedback-form-short")[0].reset();
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+
+    BX.ready(function(){
+        loader = BX('ajax-preloader-wrap');
+        BX.showWait = function(node, msg) {
+            BX.style(loader, 'display', 'block');
+            BX.addClass(loader, 'ajax-preloader--animated');
+        };
+        BX.closeWait = function(node, obMsg) {
+            BX.style(loader, 'display', 'none');
+            BX.removeClass(loader, 'ajax-preloader--animated');
+        };
     });
  });
 
 
 $(document).click(function (e) {
-    if ($(e.target).is('#success-icon')) {
+	if ($(e.target).is('#success-icon') || $(e.target).is('#success-icon__icon')) {
         e.preventDefault()
         summonedSuccess.classList.remove('active')
     }

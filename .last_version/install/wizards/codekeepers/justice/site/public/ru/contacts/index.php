@@ -11,21 +11,26 @@ $APPLICATION->SetTitle("Контакты");
                 <h2><?=$GLOBALS['global_info']['title1'];?></h2>
 
                 <?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-contacts", Array(
-						"COMPONENT_TEMPLATE" => ".default",
-                        "AJAX_MODE" => "Y",
-                        "AJAX_OPTION_SHADOW" => "N",
-                        "AJAX_OPTION_JUMP" => "N",
-                        "AJAX_OPTION_HISTORY" => "N",
-							"USE_CAPTCHA" => "Y",
-							"OK_TEXT" => GetMessage("FORM_OK_TEXT"),	
-							"REQUIRED_FIELDS" => array(	
-								0 => "NAME",
-								1 => "EMAIL",
-							),
-							"EVENT_MESSAGE_ID" => "",
-							"SUBMIT_TEXT" => $GLOBALS['global_info']['text'],
-						),
-						false
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "AJAX_MODE" => "Y",
+                    "AJAX_OPTION_SHADOW" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    "USE_CAPTCHA" => "Y",
+                    "OK_TEXT" => GetMessage("FORM_OK_TEXT"),	
+                    "REQUIRED_FIELDS" => array(
+                        0 => "NAME",
+                        1 => "PHONE",
+                        2 => "MESSAGE",
+                    ),
+                    "EVENT_MESSAGE_ID" => "",
+                    "SUBMIT_TEXT" => $GLOBALS['global_info']['text'],
+
+                    "FORM_PAGE" => "Контакты",
+                    "FORM_SECTION" => "-",
+                    "FORM_TYPE" => "Форма на странице контактов",
+                    ),
+                    false
                 );?>
             </div>
             <div class="contact-info">

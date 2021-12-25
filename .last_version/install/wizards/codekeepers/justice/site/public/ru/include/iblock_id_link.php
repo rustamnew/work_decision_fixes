@@ -26,5 +26,6 @@ $GLOBALS["codekeepers_block_id"] = array(
     'settings_messengers_id' => '#MESSENGERS_IBLOCK_ID#',
     'settings_main_id' => '#MAIN_SETTINGS_IBLOCK_ID#',
     'settings_main_element_id' => '#MAIN_SETTINGS_ELEMENT_ID#',
+    'requests_feedback_id' => '#FEEDBACK_IBLOCK_ID#',
 )
 ?>

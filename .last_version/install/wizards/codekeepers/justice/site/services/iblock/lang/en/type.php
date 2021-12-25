@@ -14,4 +14,8 @@ $MESS["SETTINGS_SECTION_NAME"]  = "Sections";
 $MESS["BANNERS_TYPE_NAME"] = "Banners";
 $MESS["BANNERS_ELEMENT_NAME"] = "Elements";
 $MESS["BANNERS_SECTION_NAME"] = "Sections";
+
+$MESS["REQUESTS_TYPE_NAME"] = "Requests";
+$MESS["REQUESTS_ELEMENT_NAME"] = "Elements";
+$MESS["REQUESTS_SECTION_NAME"] = "Sections";
 ?>

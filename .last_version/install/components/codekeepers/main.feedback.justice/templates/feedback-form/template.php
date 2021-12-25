@@ -11,6 +11,26 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
  */
 ?>
 
+<?
+$nameReq;
+$phoneReq;
+$messageReq;
+foreach($arParams["REQUIRED_FIELDS"] as $item):?>
+	<?if($item === "NAME") {
+		$nameReq = true;
+	}?>
+
+	<?if($item === "PHONE") {
+		$phoneReq = true;
+	}?>
+
+	<?if($item === "MESSAGE") {
+		$messageReq = true;
+	}?>
+<?endforeach;?>
+
+
+
 <?if(!empty($arResult["ERROR_MESSAGE"]))
 {
 	foreach($arResult["ERROR_MESSAGE"] as $v)
@@ -18,27 +38,28 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 }?>
 
 
+
 <div class="mf-ok-text">&nbsp;<?=$arResult["OK_MESSAGE"]?></div>
 
 
-<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
+<form action="<?=POST_FORM_ACTION_URI?>" method="POST" id="feedback-form">
 	<?=bitrix_sessid_post()?>
 	<div class="row">
 		<div class="col-md-6">
 			<div class="quote-item">
-				<input type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" required>
+				<input type="text" name="user_name" placeholder="<?echo GetMessage("YOUR_NAME")?>" <?if($nameReq):?>required<?endif;?>>
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="quote-item">
-				<input type="email" name="user_email" placeholder="<?echo GetMessage("YOUR_EMAIL")?>" required>
+				<input type="text" name="user_phone" placeholder="<?echo GetMessage("YOUR_PHONE")?>" <?if($phoneReq):?>required<?endif;?>>
 			</div>
 		</div>
 		
 		<div class="col-md-12">
 			<div class="quote-item">
 				<div class="quote-item">
-					<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" required><?=$arResult["MESSAGE"]?></textarea>
+					<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" <?if($messageReq):?>required<?endif;?>><?=$arResult["MESSAGE"]?></textarea>
 				</div>
 			</div>
 		</div>
