@@ -34,7 +34,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 					<div class="form-short-wrap">
 						<?$APPLICATION->IncludeComponent("codekeepers:main.feedback.justice", "feedback-form-short", Array(
-							"AJAX_MODE" => "Y",
+							"AJAX_MODE" => "N",
 							"AJAX_OPTION_SHADOW" => "N",
 							"AJAX_OPTION_JUMP" => "N",
 							"AJAX_OPTION_HISTORY" => "N",
@@ -48,7 +48,9 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 								1 => "PHONE",
 								2 => "MESSAGE",
 							),
-							"EVENT_MESSAGE_ID" => "",
+							"EVENT_MESSAGE_ID" => array(
+								0 => "#FORM_ID#"
+							),
 							"SUBMIT_TEXT" => $arItem["PROPERTIES"]["text"]["VALUE"],
 							"FORM_PAGE" => $arParams["FORM_PAGE"],
 							"FORM_SECTION" => $arParams["FORM_SECTION"],

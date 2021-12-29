@@ -40,14 +40,12 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 					<input type="hidden" name="captcha_sid" value="<?=$arResult["capCode"]?>">
 					<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>" width="180" height="40" alt="CAPTCHA">
 					<div class="mf-text"><?=GetMessage("MFT_CAPTCHA_CODE")?><span class="mf-req">*</span></div>
-					<input type="text" name="captcha_word" size="30" maxlength="50" value="">
+					<input type="text" name="captcha_word" size="30" maxlength="50" value="" required>
 				</div>
 			</div>
 		<?endif;?>
 
 		<div class="subscribe-item">
-			<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
-
 			<input type="hidden" name="FORM_PAGE" value="<?=$arParams["FORM_PAGE"]?>">
 			<input type="hidden" name="FORM_SECTION" value="<?=$arParams["FORM_SECTION"]?>">
 			<input type="hidden" name="FORM_TYPE" value="<?=$arParams["FORM_TYPE"]?>">

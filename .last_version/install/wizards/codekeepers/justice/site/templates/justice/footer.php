@@ -234,17 +234,17 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 </div>
             </footer>
             
-            <!-- :: Button Dark Mode -->
+            <!-- :: Button Dark Mode 
             <div class="dark-mode-decision">
                 <i class="fas fa-moon"></i>
-            </div>
+            </div>-->
 
-            <!-- :: Scroll UP -->
+            <!-- :: Scroll UP 
             <div class="scroll-up">
                 <a href="#page" class="move-section">
                     <i class="fas fa-long-arrow-alt-up"></i>
                 </a>
-            </div>
+            </div>-->
 
         </div>
 
@@ -263,7 +263,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "CACHE_GROUPS" => "Y",
                 "CACHE_TIME" => "36000000",
                 "CACHE_TYPE" => "A",
-                "CHECK_DATES" => "Y",
+                "CHECK_DATES" => "N",
                 "DETAIL_URL" => "",
                 "DISPLAY_BOTTOM_PAGER" => "N",
                 "DISPLAY_DATE" => "N",
@@ -306,10 +306,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "SORT_ORDER2" => "ASC",
                 "PREVIEW_TRUNCATE_LEN" => "",
                 "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                 "PARENT_SECTION" => "",
                 "PARENT_SECTION_CODE" => "",
-                "INCLUDE_SUBSECTIONS" => "Y",
+                "INCLUDE_SUBSECTIONS" => "N",
                 "STRICT_SECTION_CHECK" => "N",
                 "LIST_POSITION" => "TOP_LEFT",
                 "LIST_SHOW" => "N",
@@ -338,8 +338,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                         1 => "PHONE",
                         2 => "MESSAGE",
                     ),
-                    "EVENT_MESSAGE_ID" => "",
-                    "FORM_TYPE" => "Всплывающая форма"
+                    "EVENT_MESSAGE_ID" => array(
+                        0 => "#FORM_ID#"
+                    ),
+                    "FORM_TYPE" => "Всплывающая форма",
+                    "FORM_CAPTCHA_ID" => "popup"
                 ),
                 false
             );?>

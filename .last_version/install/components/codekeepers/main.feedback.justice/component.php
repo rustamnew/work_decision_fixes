@@ -41,18 +41,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 		//if(mb_strlen($_POST["user_email"]) > 1 && !check_email($_POST["user_email"]))
 			//$arResult["ERROR_MESSAGE"][] = GetMessage("MF_EMAIL_NOT_VALID");
 		if($arParams["USE_CAPTCHA"] == "Y")
-		{
-			$captcha_code = $_POST["captcha_sid"];
-			$captcha_word = $_POST["captcha_word"];
-			$cpt = new CCaptcha();
-			$captchaPass = COption::GetOptionString("main", "captcha_password", "");
-			if ($captcha_word <> '' && $captcha_code <> '')
-			{
-				if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
-					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
+		{	
+			if ($arParams["FORM_CAPTCHA_ID"] == 'popup') {
+				$captcha_code = $_POST["captcha_sid_popup"];
+				$captcha_word = $_POST["captcha_word_popup"];
+				$cpt = new CCaptcha();
+				$captchaPass = COption::GetOptionString("main", "captcha_password", "");
+				if ($captcha_word <> '' && $captcha_code <> '')
+				{
+					if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
+						$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
+				}
+				else
+					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
+			} else {
+				$captcha_code = $_POST["captcha_sid"];
+				$captcha_word = $_POST["captcha_word"];
+				$cpt = new CCaptcha();
+				$captchaPass = COption::GetOptionString("main", "captcha_password", "");
+				if ($captcha_word <> '' && $captcha_code <> '')
+				{
+					if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
+						$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
+				}
+				else
+					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
 			}
-			else
-				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
+
 
 		}			
 		if(empty($arResult["ERROR_MESSAGE"]))

@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 $i = 0;
 ?>
 
-<div class="careers py-100-70">
+<div class="careers py-100-70 discounts">
 	<div class="container">
 		<?if($arParams["NAME"] or $arParams["TITLE"] or $arParams["SUBTITLE"]):?>
 			<div class="row">
@@ -40,7 +40,7 @@ $i = 0;
 				
 				<div class="col-md-6 col-lg-4">
 					<div class="item-careers" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-						<h4><a><?=$arItem["NAME"]?></a></h4>
+						<h4><a data-fancybox data-src="#hidden-content-discounts<?=$i?>" href="javascript:;"><?=$arItem["NAME"]?></a></h4>
 						<ul>
 							<li class="active"><?echo FormatDateFromDB($arItem["DATE_ACTIVE_TO"], 'SHORT');?></li>
 							<li><?=$arItem["PROPERTIES"]["city"]["VALUE"];?></li>
@@ -74,8 +74,6 @@ $i = 0;
 							<?endif;?>
 
 							<p><?=$arItem["DETAIL_TEXT"]?></p>
-
-							<a href="#" class="summonFormButton btn-1 discounts__button"><?echo GetMessage("REQUEST_CALL")?></a>
 						</div>
 
 					</div>

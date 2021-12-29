@@ -1438,6 +1438,7 @@ header.navs.active{
     font-size: 21px;
     font-weight: 600;
     margin-bottom: 20px;
+    color: #262B3E;
 }
 .practice-area-item .content p{
     margin-bottom: 0;
@@ -2543,10 +2544,6 @@ header.navs.active{
 
 /* :: Scroll Up */
 .scroll-up {
-    position: fixed;
-    z-index: 100;
-    bottom: 40px;
-    right: 30px;
     -webkit-box-shadow: 0px 0px 40px 4px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 0px 40px 4px rgba(0, 0, 0, 0.05);
     -webkit-transform: scale(0);
@@ -2568,7 +2565,7 @@ header.navs.active{
     display: inline-block;
     text-align: center;
     border: 1px solid #C89D66;
-    border-radius: 3px;
+    border-radius: 50%;
     outline: none;
 }
 .scroll-up:hover a{
@@ -3137,7 +3134,7 @@ header.navs.active{
     font-weight: 600;
     color: #262B3E;
 }
-.item-careers h4:hover a{
+.item-careers h4 a:hover{
     color: #C89D66;
 }
 .item-careers ul li{
@@ -5026,8 +5023,8 @@ h5 {
 
 .fixed-messenger-buttons {
     position: fixed;
-    bottom: 16%;
-    right: 6%;
+    bottom: 3%;
+    z-index: 100;
 }
 .fixed-messenger-buttons ul {
     display: flex;
@@ -5148,4 +5145,42 @@ h5 {
     .breadcrumb-header .banner h1 {
         font-size: 40px;
     }
+}
+
+.services-section-button.active{
+    border: 2px solid #262B3E;
+    color: #C89D66;
+    background-color: #262B3E;
+}
+
+.services-sections-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.services-sections-list li{
+    margin-right: 10px;
+}
+.services-sections-row {
+    display: none;
+}
+.services-sections-row.active {
+    display: flex;
+}
+
+.services-section-row .col-md-6 {
+    margin-bottom: 30px;
+}
+
+.dicounts .item-careers h4 a:hover {
+    color: #262B3E;
+}
+
+
+.services-sections-block .practice-area-item {
+    margin-bottom: 0;
+    height: 100%;
+}
+.services-sections-block .services-sections-row .col-md-6 {
+    margin-bottom: 30px;
 }

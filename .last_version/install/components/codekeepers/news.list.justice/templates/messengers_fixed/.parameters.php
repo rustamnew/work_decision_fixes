@@ -6,14 +6,16 @@ $arTemplateParameters = array(
 		"NAME" => GetMessage("LIST_POSITION"),
 		"TYPE" => "LIST",
 		"VALUES" => array(
-			"TOP_LEFT" => GetMessage("TOP_LEFT"),
-			"TOP_RIGHT" => GetMessage("TOP_RIGHT"),
-			"BOTTOM_LEFT" => GetMessage("BOTTOM_LEFT"),
-			"BOTTOM_RIGHT" => GetMessage("BOTTOM_RIGHT"),
+			"LEFT" => GetMessage("LEFT"),
+			"RIGHT" => GetMessage("RIGHT"),
 		),
 	),
 	"LIST_SHOW" => Array(
 		"NAME" => GetMessage("LIST_SHOW"),
+		"TYPE" => "CHECKBOX",
+	),
+	"SCROLLUP" => Array(
+		"NAME" => GetMessage("SCROLLUP"),
 		"TYPE" => "CHECKBOX",
 	),
 );

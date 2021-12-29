@@ -23,7 +23,9 @@ $APPLICATION->SetTitle("Контакты");
                         1 => "PHONE",
                         2 => "MESSAGE",
                     ),
-                    "EVENT_MESSAGE_ID" => "",
+                    "EVENT_MESSAGE_ID" => array(
+                        0 => "#FORM_ID#"
+                    ),
                     "SUBMIT_TEXT" => $GLOBALS['global_info']['text'],
 
                     "FORM_PAGE" => "Контакты",

@@ -6,7 +6,7 @@ $MESS["WZD_OPTION_5"] = "Ссылка";
 $MESS["WZD_OPTION_6"] = "*Название";
 $MESS["WZD_OPTION_7"] = "Текст по центру (отключить тизеры)";
 $MESS["WZD_OPTION_8"] = "Заголовок";
-$MESS["WZD_OPTION_9"] = "Описание";
+$MESS["WZD_OPTION_9"] = "Подзаголовок";
 $MESS["WZD_OPTION_10"] = "Тизеры";
 $MESS["WZD_OPTION_11"] = "Отображать тизеры";
 

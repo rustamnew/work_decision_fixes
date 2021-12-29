@@ -22,13 +22,11 @@ $this->setFrameMode(true);
 		?>
 		
 		<li class="services-section-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<div class="item-image" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)">
-
-			</div>
+			<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?><div class="item-image" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)"></div><?endif;?>
 			
 			<div class="item-content">
 				<h5><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h5>
-				<a class="btn-service-price">от 3000р</a>
+				<a class="btn-service-price"><?=$arItem["PROPERTIES"]["price"]["VALUE"]?></a>
 				<p><?=$arItem["PREVIEW_TEXT"]?></p>
 			</div>
 		</li>

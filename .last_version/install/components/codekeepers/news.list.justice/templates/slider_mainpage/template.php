@@ -165,7 +165,7 @@ $this->setFrameMode(true);
 											<div class="headline-top"><?=$arItem["NAME"]?></div>
 											<h1 class="handline"><?=$arItem["PREVIEW_TEXT"]?></h1>
 											<p class="about-website"><?=$arItem["DETAIL_TEXT"]?></p>
-											<a class="btn-1 btn-2 move-section" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
+											<a class="btn-1 btn-2" href="<?=$arItem["PROPERTIES"]["url"]["VALUE"];?>"><?=$arItem["PROPERTIES"]["text"]["VALUE"];?></a>
 										</div>
 									</div>
 								</div>

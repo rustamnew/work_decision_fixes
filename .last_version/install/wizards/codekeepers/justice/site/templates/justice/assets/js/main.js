@@ -62,13 +62,13 @@
     /////
 
     // :: Scroll Smooth To Go Section
-    /*$('.move-section').on('click', function (e) {
+    $('.move-section').on('click', function (e) {
         e.preventDefault();
         var anchorLink = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchorLink.attr('href')).offset().top + 1
         }, 1000);
-    });*/
+    });
 
     // :: Add Class Active To Search Box
     $('.open-search-box').on('click', function () {
@@ -357,7 +357,7 @@
         autoplayTimeout: 4000,
         smartSpeed: 1000,
         margin: 10,
-        center: true,
+        center: false,
         autoplayHoverPause: true,
         mouseDrag: true,
         touchDrag: true,
@@ -519,6 +519,7 @@ $(document).ready(function () {
             success: function (data) {
                 summonedSuccess.classList.add('active')
                 $("#feedback-form-popup")[0].reset();
+                closeFancybox()
             },
             error: function (data) {
                 console.log(data);
@@ -662,7 +663,10 @@ summonButtons.forEach((item) => {
 let formWrap = document.querySelector('#summonedFormWrap')
 
 let closeFancybox = (e) => {
-    e.preventDefault()
+    if (e) {
+        e.preventDefault()
+    }
+    
     formWrap.classList.remove('active')
 }
 
@@ -670,4 +674,30 @@ formWrap.addEventListener('click', (e) => {
     if(e.target.id === 'summonedFormWrap') {
         closeFancybox(e)
     }
+})
+
+
+//Блок Услуги
+$(".services-section-button").on('click', (e) => {
+	e.preventDefault()
+
+	let buttons = document.querySelectorAll('.services-section-button')
+
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].classList.remove('active')
+	}
+
+	let target = e.currentTarget
+	target.classList.add('active')
+
+	let num = e.currentTarget.getAttribute("data-number")
+	let wrap = document.querySelector('.services-sections-block-rows')
+	let rows = wrap.querySelectorAll('.row')
+
+	for (let i = 0; i < rows.length; i++) {
+		rows[i].classList.remove('active')
+	}
+
+	let row = document.querySelector(`[data-number-row='${num}']`)
+	row.classList.add('active')
 })

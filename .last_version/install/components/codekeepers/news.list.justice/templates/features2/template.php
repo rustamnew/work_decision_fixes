@@ -166,7 +166,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 			<div class="video-presentation" style="background-image: url(<?echo CFile::GetPath($arItem["PROPERTIES"]["video_background"]["VALUE"]);?>)">
 				<div class="overlay"></div>
 				<div class="presentation-box">
-					<a href="<?=SITE_DIR.$arItem["PROPERTIES"]["video_url"]["VALUE"];?>" class="pulse" data-lity="">
+					<a href="<?=$arItem["PROPERTIES"]["video_url"]["VALUE"];?>" class="pulse" data-lity="">
 						<i class="fas fa-play"></i>
 					</a>
 				</div>

@@ -14,8 +14,17 @@ $this->setFrameMode(true);
 ?>
 
 <?if($arParams["LIST_SHOW"]):?>
-    <div class="fixed-messenger-buttons">
-        <ul>
+    <div class="fixed-messenger-buttons" style="<?if($arParams["LIST_POSITION"] == 'LEFT'):?>left: 3%;<?endif;?><?if($arParams["LIST_POSITION"] == 'RIGHT'):?>right: 3%;<?endif;?>">
+        <ul> 
+            <?if($arParams["SCROLLUP"]):?>
+                <li class="messenger-item">
+                    <div class="scroll-up active">
+                        <a href="#page" class="move-section">
+                            <i class="fas fa-long-arrow-alt-up"></i>
+                        </a>
+                    </div>
+                </li>
+            <?endif;?>
             <?foreach($arResult["ITEMS"] as $arItem):?>
                 <?if($arItem["PROPERTIES"]["icon"]["VALUE"]):?>
                     <?
@@ -35,9 +44,9 @@ $this->setFrameMode(true);
                                 $background = $arItem["PROPERTIES"]["color_background"]["VALUE"];
                                 $style =  ' fill='.$color.' style="background-color:'.$background.'"';
                                 $pos = 4;
-                                $test = substr_replace($svg_file, $style, $pos, 0);
+                                $svg_file = substr_replace($svg_file, $style, $pos, 0);
 
-                                print_r($test);;
+                                print_r($svg_file);;
 
                                 //print_r($svg_file);
                                 ?>

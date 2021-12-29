@@ -16,4 +16,7 @@ $MESS["WZD_OPTION_12"] = "Детальная картинка";
 $MESS["WZD_OPTION_13"] = "Юристы";
 $MESS["WZD_OPTION_14"] = "Отзывы";
 $MESS["WZD_OPTION_15"] = "Акции";
+
+$MESS["WZD_OPTION_16"] = "Иконка";
+$MESS["WZD_OPTION_17"] = "Цена";
 ?>

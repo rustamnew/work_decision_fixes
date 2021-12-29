@@ -66,7 +66,40 @@ $APPLICATION->SetTitle('Главная');
 	),
 	false
 );?>
-<?$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent("codekeepers:catalog.section.list.justice", "services-block", Array(
+	"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
+		"FILTER_NAME" => "sectionsFilter",	// Имя массива со значениями фильтра разделов
+		"IBLOCK_ID" => $GLOBALS["codekeepers_block_id"]["content_services_id"],	// Инфоблок
+		"IBLOCK_TYPE" => "content",	// Тип инфоблока
+		"SECTION_CODE" => "",	// Код раздела
+		"SECTION_FIELDS" => array(	// Поля разделов
+			0 => "",
+			1 => "",
+		),
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],
+		"SECTION_URL" => "",
+		"SECTION_USER_FIELDS" => array(
+			0 => "UF_ICON",
+			1 => "",
+		),
+		"SHOW_PARENT_NAME" => "Y",
+		"TOP_DEPTH" => "2",
+		"VIEW_MODE" => "LINE",
+
+		"NAME" => "Услуги",
+		"TITLE" => "Что мы можем предложить",
+		"SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг.",
+		"TEXT_LENGTH" => "105",
+	),
+	false
+);?>
+<?/*$APPLICATION->IncludeComponent(
 	"codekeepers:news.list.justice", 
 	"services-list", 
 	array(
@@ -134,7 +167,7 @@ $APPLICATION->SetTitle('Главная');
 		"SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг."
 	),
 	false
-);?>
+);*/?>
 <?$APPLICATION->IncludeComponent(
 	"codekeepers:news.list.justice", 
 	"about", 
@@ -795,7 +828,7 @@ $APPLICATION->SetTitle('Главная');
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "N",
+		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "timeline-block",
 		"DETAIL_URL" => "",

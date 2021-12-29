@@ -48,17 +48,16 @@ foreach($arParams["REQUIRED_FIELDS"] as $item):?>
 	<?if($arParams["USE_CAPTCHA"] == "Y"):?>
 		<div class="mf-captcha">
 			<div class="captcha_col">
-				<input type="hidden" name="captcha_sid" value="<?=$arResult["capCode"]?>">
+				<input type="hidden" name="captcha_sid_popup" value="<?=$arResult["capCode"]?>">
 				<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>" width="180" height="40" alt="CAPTCHA">
 			</div>
 
 			<div class="captcha_col">
-				<input type="text" name="captcha_word" size="30" maxlength="50" value="" placeholder="<?=GetMessage("ENTER_CODE")?>">
+				<input type="text" name="captcha_word_popup" size="30" maxlength="50" value="" placeholder="<?=GetMessage("ENTER_CODE")?>" required>
 			</div>
 		</div>
 	<?endif;?>
 
-	<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
 
 	<input type="hidden" name="FORM_PAGE" value="<?$APPLICATION->ShowTitle()?>">
 	<input type="hidden" name="FORM_TYPE" value="<?=$arParams["FORM_TYPE"]?>">

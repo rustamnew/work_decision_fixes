@@ -18,13 +18,13 @@ $this->setFrameMode(true);
 	<div class="img-box">
 		<img class="img-fluid" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="01 Blog">
 		<ul>
-			<li><a class="price-detail">от 3000р</a></li>
+			<li><a class="price-detail"><?=$arResult["PROPERTIES"]["price"]["VALUE"]?></a></li>
 		</ul>
 	</div>
 	<h3><?=$arResult["NAME"]?></h3>
 	<p class="services-detail-text"><?=$arResult["DETAIL_TEXT"]?></p>
 
-	<a class="summonFormButton btn-1 btn-2" href="/s2/">Заказать звонок</a>
+	<a class="summonFormButton btn-1" href="<?=SITE_DIR?>">Заказать звонок</a>
 </div>
 
 

@@ -165,7 +165,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 								"codekeepers:main.feedback.justice", 
 								"feedback-form", 
 								array(
-									"AJAX_MODE" => "Y",
+									"AJAX_MODE" => "N",
 									"AJAX_OPTION_SHADOW" => "N",
 									"AJAX_OPTION_JUMP" => "N",
 									"AJAX_OPTION_HISTORY" => "N",
@@ -173,6 +173,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 									"USE_CAPTCHA" => "Y",
 									"OK_TEXT" => GetMessage("FORM_OK_TEXT"),
 									"EVENT_MESSAGE_ID" => array(
+										0 => "#FORM_ID#"
 									),
 									"REQUIRED_FIELDS" => array(
 										0 => "NAME",
