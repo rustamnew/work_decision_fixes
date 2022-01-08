@@ -13,12 +13,12 @@
 $this->setFrameMode(true);
 ?>
 
-<?if($arParams["LIST_SHOW"]):?>
-    <div class="fixed-messenger-buttons" style="<?if($arParams["LIST_POSITION"] == 'LEFT'):?>left: 3%;<?endif;?><?if($arParams["LIST_POSITION"] == 'RIGHT'):?>right: 3%;<?endif;?>">
+<?if($arParams["LIST_SHOW"] === 'Y'):?>
+    <div class="fixed-messenger-buttons" style="<?if($arParams["LIST_POSITION"] === 'LEFT'):?>left: 3%;<?endif;?><?if($arParams["LIST_POSITION"] === 'RIGHT'):?>right: 3%;<?endif;?>">
         <ul> 
-            <?if($arParams["SCROLLUP"]):?>
+            <?if($arParams["SCROLLUP"] === 'Y'):?>
                 <li class="messenger-item">
-                    <div class="scroll-up active">
+                    <div class="scroll-up">
                         <a href="#page" class="move-section">
                             <i class="fas fa-long-arrow-alt-up"></i>
                         </a>

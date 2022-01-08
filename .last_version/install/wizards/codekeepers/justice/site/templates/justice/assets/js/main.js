@@ -388,10 +388,12 @@
         items: 1,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+				center: true
             },
             768: {
-                items: 2
+                items: 2,
+				center: false
             }
         }
     });
@@ -421,8 +423,10 @@
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 400) {
             $('.scroll-up').addClass('active');
+            $('.fixed-messenger-buttons').addClass('active');
         } else {
             $('.scroll-up').removeClass('active');
+            $('.fixed-messenger-buttons').removeClass('active');
         }
     });
     

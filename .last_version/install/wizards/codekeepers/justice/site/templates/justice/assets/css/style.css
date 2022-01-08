@@ -2589,7 +2589,7 @@ header.navs.active{
     padding-top: calc(85px + 120px);
 }
 .breadcrumb-header .banner h1{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     line-height: 1.2;
     color: #FFF;
@@ -5025,6 +5025,10 @@ h5 {
     position: fixed;
     bottom: 3%;
     z-index: 100;
+    display: none;
+}
+.fixed-messenger-buttons.active {
+    display: block;
 }
 .fixed-messenger-buttons ul {
     display: flex;
@@ -5157,9 +5161,11 @@ h5 {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 .services-sections-list li{
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .services-sections-row {
     display: none;
@@ -5183,4 +5189,23 @@ h5 {
 }
 .services-sections-block .services-sections-row .col-md-6 {
     margin-bottom: 30px;
+}
+
+
+
+.services-section-item .item-image {
+    flex: 2;
+}
+.services-section-item .item-content {
+    flex: 1;
+}
+
+
+@media (max-width: 768px) {
+    .testimonial_popup {
+        width: 80%
+    }
+    .item-careers_popup {
+        width: 80%
+    }
 }

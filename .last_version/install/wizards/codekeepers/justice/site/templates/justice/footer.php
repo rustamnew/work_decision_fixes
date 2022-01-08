@@ -114,7 +114,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                     array(
                                         "COMPONENT_TEMPLATE" => "menu_footer",
                                         "ROOT_MENU_TYPE" => "bottom1",
-                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_TYPE" => "A",
                                         "MENU_CACHE_TIME" => "3600",
                                         "MENU_CACHE_USE_GROUPS" => "Y",
                                         "MENU_CACHE_GET_VARS" => array(
@@ -311,11 +311,15 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 "PARENT_SECTION_CODE" => "",
                 "INCLUDE_SUBSECTIONS" => "N",
                 "STRICT_SECTION_CHECK" => "N",
-                "LIST_POSITION" => "TOP_LEFT",
-                "LIST_SHOW" => "N",
+
                 "PAGER_TITLE" => "Новости",
                 "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                "SHOW_404" => "N"
+                "SHOW_404" => "N",
+                
+                
+                "LIST_SHOW" => "Y",
+                "LIST_POSITION" => "RIGHT",
+                "SCROLLUP" => "Y",
             ),
             false
         );?>
