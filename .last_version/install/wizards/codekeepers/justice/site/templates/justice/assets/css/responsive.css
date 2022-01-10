@@ -198,6 +198,23 @@
     .shop.area .text-box-details .title-product{
         margin-top: 50px;
     }
+
+
+
+    .header .banner .handline {
+		font-size: 37px !important;
+	}
+    .sec-title h3 {
+		font-size: 29px;
+	}
+	.header .banner .headline-top {
+		font-weight: 400;
+		font-size: 15px;
+	}
+	.header .banner .about-website {
+		font-size: 15px;
+		font-weight: 400;
+	}
     
 }
 

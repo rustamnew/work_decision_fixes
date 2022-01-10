@@ -960,24 +960,23 @@ header.navs.active{
 }
 .header .banner .headline-top{
     line-height: 23px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     margin-bottom: 12px;
     color: #FFF;
 }
 .header .banner .handline{
     color: #FFF;
-    
     font-weight: 700;
     line-height: 1.2;
-    font-size: 60px;
     margin-bottom: 30px;
+    font-size: 52px;
 }
 .header .banner .about-website{
     
     font-size: 16px;
     color: #F9F9F9;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 25px;
     margin-bottom: 30px;
 }
@@ -1508,7 +1507,7 @@ header.navs.active{
 }
 .history .sec-title h3{
     color: #FFF;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 .history-line .box-line .head h4{
     max-width: 100px;
@@ -4952,6 +4951,14 @@ h5 {
 
 .projects-owl-item-title {
     margin-bottom: 10px;
+}
+.projects-owl-item-title p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #262B3E;
+    width: 70%;
+    text-align: center;
+    margin-top: 10px;
 }
 .projects-owl-item-subtitle {
     text-transform: uppercase;

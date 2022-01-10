@@ -45,16 +45,9 @@ foreach($arParams["REQUIRED_FIELDS"] as $item):?>
 	<input class="summonedFormInputEmail" type="text" name="user_phone" placeholder="<?echo GetMessage("YOUR_PHONE")?>" <?if($phoneReq):?>required<?endif;?>>
 	<textarea class="summonedFormInputMessage" name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" <?if($messageReq):?>required<?endif;?>></textarea>
 
-	<?if($arParams["USE_CAPTCHA"] == "Y"):?>
-		<div class="mf-captcha">
-			<div class="captcha_col">
-				<input type="hidden" name="captcha_sid_popup" value="<?=$arResult["capCode"]?>">
-				<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>" width="180" height="40" alt="CAPTCHA">
-			</div>
-
-			<div class="captcha_col">
-				<input type="text" name="captcha_word_popup" size="30" maxlength="50" value="" placeholder="<?=GetMessage("ENTER_CODE")?>" required>
-			</div>
+	<?if($GLOBALS['global_info']['captcha_show']):?>
+		<div class="captcha-wrap">
+			<div class="g-recaptcha" data-sitekey="<?=$GLOBALS['global_info']['google_cap_code']?>"></div>
 		</div>
 	<?endif;?>
 

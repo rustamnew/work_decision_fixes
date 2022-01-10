@@ -83,4 +83,8 @@ $MESS["WZD_OPTION_74"] = "Иконка Адрес";
 $MESS["WZD_OPTION_75"] = "Страница Контакты";
 
 $MESS["WZD_OPTION_76"] = "Хедер - Кнопка магазина";
+
+$MESS["WZD_OPTION_77"] = "Google reCAPTCHA";
+$MESS["WZD_OPTION_78"] = "Ключ сайта";
+$MESS["WZD_OPTION_79"] = "Включить капчу на сайте";
 ?>

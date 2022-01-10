@@ -383,6 +383,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <!-- Fancybox-->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.fancybox-1.3.4.pack.js')?>"></script>
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/fancybox.umd.js')?>"></script>
+
+        <!-- Google reCAPTCHA -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         
         <!-- :: Main JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/main.js')?>"></script>

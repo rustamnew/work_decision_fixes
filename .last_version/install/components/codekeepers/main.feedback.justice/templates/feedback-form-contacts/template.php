@@ -45,13 +45,9 @@ foreach($arParams["REQUIRED_FIELDS"] as $item):?>
 
 	<textarea name="MESSAGE" cols="40" rows="10" class="message" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" <?if($messageReq):?>required<?endif;?>></textarea>
 	
-	<?if($arParams["USE_CAPTCHA"] == "Y"):?>
-		<div class="mf-captcha">
-			<div class="mf-text"><?=GetMessage("MFT_CAPTCHA")?></div>
-			<input type="hidden" name="captcha_sid" value="<?=$arResult["capCode"]?>">
-			<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>" width="180" height="40" alt="CAPTCHA">
-			<div class="mf-text"><?=GetMessage("MFT_CAPTCHA_CODE")?><span class="mf-req">*</span></div>
-			<input type="text" name="captcha_word" size="30" maxlength="50" value="" required>
+	<?if($GLOBALS['global_info']['captcha_show']):?>
+		<div class="captcha-wrap">
+			<div class="g-recaptcha" data-sitekey="<?=$GLOBALS['global_info']['google_cap_code']?>"></div>
 		</div>
 	<?endif;?>
 

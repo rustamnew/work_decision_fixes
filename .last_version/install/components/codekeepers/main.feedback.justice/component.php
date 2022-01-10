@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 		//}
 		//if(mb_strlen($_POST["user_email"]) > 1 && !check_email($_POST["user_email"]))
 			//$arResult["ERROR_MESSAGE"][] = GetMessage("MF_EMAIL_NOT_VALID");
-		if($arParams["USE_CAPTCHA"] == "Y")
+		/*if($arParams["USE_CAPTCHA"] == "Y")
 		{	
 			if ($arParams["FORM_CAPTCHA_ID"] == 'popup') {
 				$captcha_code = $_POST["captcha_sid_popup"];
@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 			}
 
 
-		}			
+		}*/		
 		if(empty($arResult["ERROR_MESSAGE"]))
 		{
 			$arFields = Array(
@@ -135,7 +135,7 @@ elseif($_REQUEST["success"] == $arResult["PARAMS_HASH"])
 	//}
 //}
 
-if($arParams["USE_CAPTCHA"] == "Y")
-	$arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
+/*if($arParams["USE_CAPTCHA"] == "Y")
+	$arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());*/
 
 $this->IncludeComponentTemplate();

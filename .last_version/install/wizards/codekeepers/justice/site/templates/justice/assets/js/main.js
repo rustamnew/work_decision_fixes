@@ -490,86 +490,126 @@ let summonedSuccess = document.querySelector('#success-icon');
 
 
 $(document).ready(function () {
+
     $("#feedback-form").submit(function (e) {
         e.preventDefault()
+        let valide = true
 
-        $.ajax({
-            url: $(this).attr("action"),
-            data: $(this).serialize() + "&submit=Отправить",
-            type: 'POST',
-            
-            //dataType: "json",
-
-            success: function (data) {
-                summonedSuccess.classList.add('active')
-                $("#feedback-form")[0].reset();
-            },
-            error: function (data) {
-                console.log(data);
+        if ($("#feedback-form").find(".g-recaptcha").length > 0) {
+            valide = false
+            let response = grecaptcha.getResponse()
+            if(response.length == 0) {
+                console.log('wrong')
+            } else {
+                valide = true
             }
-        });
-    });
+	    } 
+    
+        if (valide) {
+            $.ajax({
+                url: $(this).attr("action"),
+                data: $(this).serialize() + "&submit=Отправить",
+                type: 'POST',
+                success: function (data) {
+                    summonedSuccess.classList.add('active')
+                    $("#feedback-form")[0].reset();
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+	})
 
     $("#feedback-form-popup").submit(function (e) {
         e.preventDefault()
+        let valide = true
 
-        $.ajax({
-            url: $(this).attr("action"),
-            data: $(this).serialize() + "&submit=Отправить",
-            type: 'POST',
-
-            //dataType: "json",
-
-            success: function (data) {
-                summonedSuccess.classList.add('active')
-                $("#feedback-form-popup")[0].reset();
-                closeFancybox()
-            },
-            error: function (data) {
-                console.log(data);
+        if ($("#feedback-form-popup").find(".g-recaptcha").length > 0) {
+            valide = false
+            let response = grecaptcha.getResponse()
+            if(response.length == 0) {
+                console.log('wrong')
+            } else {
+                valide = true
             }
-        });
-    });
+	    } 
+    
+        if (valide) {
+            $.ajax({
+                url: $(this).attr("action"),
+                data: $(this).serialize() + "&submit=Отправить",
+                type: 'POST',
+                success: function (data) {
+                    summonedSuccess.classList.add('active')
+                    $("#feedback-form-popup")[0].reset();
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+	})
 
     $("#feedback-form-contacts").submit(function (e) {
         e.preventDefault()
+        let valide = true
 
-        $.ajax({
-            url: $(this).attr("action"),
-            data: $(this).serialize() + "&submit=Отправить",
-            type: 'POST',
-
-            //dataType: "json",
-
-            success: function (data) {
-                summonedSuccess.classList.add('active')
-                $("#feedback-form-contacts")[0].reset();
-            },
-            error: function (data) {
-                console.log(data);
+        if ($("#feedback-form-contacts").find(".g-recaptcha").length > 0) {
+            valide = false
+            let response = grecaptcha.getResponse()
+            if(response.length == 0) {
+                console.log('wrong')
+            } else {
+                valide = true
             }
-        });
-    });
+	    } 
+    
+        if (valide) {
+            $.ajax({
+                url: $(this).attr("action"),
+                data: $(this).serialize() + "&submit=Отправить",
+                type: 'POST',
+                success: function (data) {
+                    summonedSuccess.classList.add('active')
+                    $("#feedback-form-contacts")[0].reset();
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+	})
 
     $("#feedback-form-short").submit(function (e) {
         e.preventDefault()
+        let valide = true
 
-        $.ajax({
-            url: $(this).attr("action"),
-            data: $(this).serialize() + "&submit=Отправить",
-            type: 'POST',
-
-            //dataType: "json",
-
-            success: function (data) {
-                summonedSuccess.classList.add('active')
-                $("#feedback-form-short")[0].reset();
-            },
-            error: function (data) {
-                console.log(data);
+        if ($("#feedback-form-short").find(".g-recaptcha").length > 0) {
+            valide = false
+            let response = grecaptcha.getResponse()
+            if(response.length == 0) {
+                console.log('wrong')
+            } else {
+                valide = true
             }
-        });
-    });
+	    } 
+    
+        if (valide) {
+            $.ajax({
+                url: $(this).attr("action"),
+                data: $(this).serialize() + "&submit=Отправить",
+                type: 'POST',
+                success: function (data) {
+                    summonedSuccess.classList.add('active')
+                    $("#feedback-form-short")[0].reset();
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+	})
 
 
     BX.ready(function(){

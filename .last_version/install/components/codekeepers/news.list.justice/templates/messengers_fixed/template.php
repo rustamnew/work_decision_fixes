@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 
 <?if($arParams["LIST_SHOW"] === 'Y'):?>
-    <div class="fixed-messenger-buttons" style="<?if($arParams["LIST_POSITION"] === 'LEFT'):?>left: 3%;<?endif;?><?if($arParams["LIST_POSITION"] === 'RIGHT'):?>right: 3%;<?endif;?>">
+    <div class="fixed-messenger-buttons" style="<?if($arParams["LIST_POSITION"] === 'LEFT'):?>left: 20px;<?endif;?><?if($arParams["LIST_POSITION"] === 'RIGHT'):?>right: 20px;<?endif;?>">
         <ul> 
             <?if($arParams["SCROLLUP"] === 'Y'):?>
                 <li class="messenger-item">
