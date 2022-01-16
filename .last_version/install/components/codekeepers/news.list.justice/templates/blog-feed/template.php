@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 	<div class="container">
 <?endif;?>
 		<?if($arParams["MINIMIZE_TITLE"] == "Y"):?>
-			<h4><?=$arParams["TITLE"];?></h4>
+			<h4 class="blog-feed-small-title"><?=$arParams["TITLE"];?></h4>
 		<?else:?>
 			<div class="row">
 				<div class="col-md-8 offset-md-2">

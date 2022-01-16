@@ -29,13 +29,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"ќтзывы", 
-		SITE_DIR."/reviews/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"ёристы", 
 		SITE_DIR."/team/", 
 		Array(), 

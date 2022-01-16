@@ -47,7 +47,7 @@ foreach($arParams["REQUIRED_FIELDS"] as $item):?>
 
 	<?if($GLOBALS['global_info']['captcha_show']):?>
 		<div class="captcha-wrap">
-			<div class="g-recaptcha" data-sitekey="<?=$GLOBALS['global_info']['google_cap_code']?>"></div>
+			<div class="g-recaptcha" id="recaptcha_popup"></div>
 		</div>
 	<?endif;?>
 

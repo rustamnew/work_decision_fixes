@@ -1,0 +1,142 @@
+/*<style>*/
+    .btn-1 {
+        background-color: color1;
+    }
+    .btn-3 {
+        color: color1;
+    }
+    .features .features-box .features-item {
+        background-color: color2;
+    }
+    .features .features-box .features-item:nth-of-type(2) {
+        background-color: color1;
+    }
+    .services-section-button.active {
+        background-color: color2;
+    }
+    .practice-area-item:hover {
+        background-color: color1;
+        border-color: color1;
+    }
+    .about .img-box .case-about {
+        background-color: color1;
+    }
+    .sec-title h2 {
+        color: color1;
+    }
+    .presentation-box .pulse {
+        background-color: color1;
+    }
+    .projects-owl-wrap .text-box a {
+        color: color1;
+    }
+    .item-careers ul li.active {
+        background-color: color1;
+    }
+    .item-careers a {
+        color: color1;
+    }
+    .advisors-box .img-box ul li a {
+        background-color: color1;
+    }
+    .advisors-box .img-box ul li:hover a {
+        color: color1;
+    }
+    .advisors-box .text-box span {
+        color: color1;
+    }
+    .provide .text-box {
+        background-color: color2;
+    }
+    section.provide .content-item-icon svg {
+        fill: color1;
+    }
+    section.provide .img-box .statistic-item-icon svg {
+        fill: color1;
+    }
+    .statistic-owl.owl-theme .owl-dots .owl-dot.active span, 
+    .statistic-owl.owl-theme .owl-dots .owl-dot:hover span {
+        background-color: color1;
+    }
+    .statistic-item .content-box .name-content {
+        color: color1;
+    }
+    .skills .skill-box .skill-line .line {
+        background-color: color1;
+    }
+    .history-line .box-line .down:after {
+        background-color: color1;
+    }
+    .quote .box .img-box .quote-info {
+        background-color: color1;
+    }
+    .owl-testimonial-2 .box-item .text-box::after, 
+    .owl-testimonial-3 .box-item .text-box:after {
+        background-color: color1;
+    }
+    .owl-testimonial-1 .box-item .clients-talk .info span, 
+    .owl-testimonial-2 .box-item .clients-talk .info span, 
+    .owl-testimonial-3 .box-item .clients-talk .info span {
+        color: color1;
+    }
+    .owl-testimonial-2 .box-item .text-box .testimonial-expand-button, 
+    .owl-testimonial-3 .box-item .text-box .testimonial-expand-button {
+        color: color1;
+    }
+    .blog-item .img-box ul {
+        background-color: color1;
+    }
+
+    .scroll-up a {
+        background-color: color1;
+        border-color: color1;
+    }
+    .footer {
+        background-color: color2;
+    }
+    .footer .logo ul li a {
+        background-color: color3;
+    }
+    .copyright {
+        background-color: color3;
+    }
+
+
+    .call-back {
+        background-color: color1;
+    }
+    .btn-service-price {
+        background-color: color1;
+    }
+
+    .pagination.pagination-sm .page-item.active .page-link {
+        background-color: color1;
+        border-color: color1;
+    }   
+    .pagination.pagination-sm .page-link {
+        color: color1;
+    }
+
+    .single-practice-areas-box .img-box ul {
+        background-color: color1;
+    }
+
+    .widget .widget-body .follow .icon li a {
+        background-color: color1;
+        border-color: color1;
+    }
+    .widget .widget-body .follow .icon li:hover a {
+        background-color: color2;
+        border-color: color2;
+    }
+    .single-practice-areas-list li.active .link a, 
+    .single-practice-areas-list li:hover .link a {
+        color: color1;
+    }
+    .news-item .item-content span a {
+        color: color1;
+    }
+    .case-study-item span {
+        background-color: color1;
+    }
+/*</style>*/

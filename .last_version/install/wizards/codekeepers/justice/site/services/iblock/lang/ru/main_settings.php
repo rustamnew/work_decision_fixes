@@ -87,4 +87,10 @@ $MESS["WZD_OPTION_76"] = "Хедер - Кнопка магазина";
 $MESS["WZD_OPTION_77"] = "Google reCAPTCHA";
 $MESS["WZD_OPTION_78"] = "Ключ сайта";
 $MESS["WZD_OPTION_79"] = "Включить капчу на сайте";
+
+$MESS["WZD_OPTION_80"] = "Цвета темы";
+$MESS["WZD_OPTION_81"] = "Основной цвет";
+$MESS["WZD_OPTION_82"] = "Дополнительный цвет";
+$MESS["WZD_OPTION_83"] = "Дополнительный цвет 2";
+$MESS["WZD_OPTION_84"] = "Цвет для темной темы";
 ?>

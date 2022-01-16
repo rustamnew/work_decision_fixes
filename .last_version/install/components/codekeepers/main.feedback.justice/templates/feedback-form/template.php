@@ -62,13 +62,14 @@ foreach($arParams["REQUIRED_FIELDS"] as $item):?>
 					<textarea name="MESSAGE" placeholder="<?echo GetMessage("YOUR_MESSAGE")?>" <?if($messageReq):?>required<?endif;?>><?=$arResult["MESSAGE"]?></textarea>
 				</div>
 			</div>
+
+			<?if($GLOBALS['global_info']['captcha_show']):?>
+				<div class="captcha-wrap">
+					<div class="g-recaptcha" id="recaptcha_mainform"></div>
+				</div>
+			<?endif;?>
 		</div>
-		
-		<?if($GLOBALS['global_info']['captcha_show']):?>
-			<div class="captcha-wrap">
-				<div class="g-recaptcha" data-sitekey="<?=$GLOBALS['global_info']['google_cap_code']?>"></div>
-			</div>
-		<?endif;?>
+
 
 		<div class="col-md-12">
 			<div class="quote-item">

@@ -27,8 +27,17 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Decision is a Lawyer & Attorney HTML Template. Designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout. Decision specially designed for Attorneys, Lawyers, Law Firm, Law Advisers, Legal Officers, Legal Advisers, Legal offices, Barristers at Law, Counsels, Solicitors, Advocates and other legal and law related services. Decision comes with most advanced and latest web technologies, enjoyable UX and the most beautiful design trends. Our template provides a platform to simply edit elements, choose styles and play around with the look and feel of your site!!">
-        <meta name="keywords" content="accountant, advocate, attorneys, barrister, business, consultancy, counsel, finance, justice, law, lawyer, legal adviser, legal office, solicitor">
+
+
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/safari-pinned-tab.svg" color="#c89d66">
+        <meta name="msapplication-TileColor" content="#262b3e">
+        <meta name="theme-color" content="#ffffff">
+
 
         <title><?$APPLICATION->ShowTitle();?></title>
         
@@ -36,6 +45,8 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/bootstrap.min.css');?>
 
         <!-- :: Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <?$APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");?>
 
         <!-- :: Fontawesome -->
@@ -133,7 +144,7 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
 
                                 <?if($GLOBALS['global_info']['header_button_show']):?>
                                     <li>
-                                        <a class="summonFormButton btn-1 btn-2" href="<?=SITE_DIR?>">
+                                        <a class="summonFormButton btn-1" href="<?=SITE_DIR?>">
                                             <?=$GLOBALS['global_info']['header_button_text'];?>
                                         </a>
                                     </li>
@@ -477,7 +488,7 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
                             13 => "teaser4_title",
                             14 => "teaser4_show",
                             15 => "teaser4_url",
-                            16 => "",
+                            16 => "subtitle",
                         ),
                         "SET_BROWSER_TITLE" => "N",
                         "SET_LAST_MODIFIED" => "N",

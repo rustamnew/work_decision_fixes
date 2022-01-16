@@ -15,8 +15,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Проекты", 
+		"Выигранные дела", 
 		SITE_DIR."/projects/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		SITE_DIR."/reviews/", 
 		Array(), 
 		Array(), 
 		"" 

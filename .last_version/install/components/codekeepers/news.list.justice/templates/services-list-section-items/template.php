@@ -22,7 +22,7 @@ $this->setFrameMode(true);
 		?>
 		
 		<li class="services-section-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?><div class="item-image" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)"></div><?endif;?>
+			<?if($arItem["PREVIEW_PICTURE"]["SRC"]):?><a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="item-image" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)"></a><?endif;?>
 			
 			<div class="item-content">
 				<h5><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h5>

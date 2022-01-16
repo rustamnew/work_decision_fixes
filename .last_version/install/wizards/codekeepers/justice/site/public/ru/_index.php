@@ -1,6 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Главная');
+$APPLICATION->SetTitle('Justice - готовый сайт для юридических компаний, юристов и адвокатов');
 ?>
 
 <?$APPLICATION->IncludeComponent("codekeepers:news.list.justice", "features", Array(
@@ -443,8 +443,8 @@ $APPLICATION->SetTitle('Главная');
 		"SET_STATUS_404" => "N",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
-		"NAME" => "Проекты",
-		"TITLE" => "Наши проекты",
+		"NAME" => "Наш опыт",
+		"TITLE" => "Выигранные дела",
 		"SUBTITLE" => "Решения принимаются профессионалами. Мы гарантируем высокое качество оказания услуг."
 	),
 	false

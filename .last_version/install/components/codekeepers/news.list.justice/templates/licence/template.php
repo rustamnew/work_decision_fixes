@@ -23,7 +23,7 @@ $this->setFrameMode(true);
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row licence-list">
 			<?foreach($arResult["ITEMS"] as $arItem):?>
 				<?
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));

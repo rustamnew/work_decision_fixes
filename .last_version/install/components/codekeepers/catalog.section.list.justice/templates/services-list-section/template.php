@@ -16,9 +16,7 @@ $this->setFrameMode(true);
 <ul class="services-section-list">
 	<?foreach($arResult["SECTIONS"] as $arItem):?>
 		<li class="services-section-item">
-			<div class="item-image" style="background-image: url(<?=$arItem["PICTURE"]["SRC"]?>)">
-
-			</div>
+			<a href="<?=$arItem["SECTION_PAGE_URL"]?>" class="item-image" style="background-image: url(<?=$arItem["PICTURE"]["SRC"]?>)"></a>
 
 			<div class="item-content">
 				<h5><a href="<?=$arItem["SECTION_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></h5>

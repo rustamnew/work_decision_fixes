@@ -147,7 +147,7 @@ $this->setFrameMode(true);
 
 									<?if($ar_res["PREVIEW_PICTURE"]):?>
 										<div class="discounts-image">
-											<img src="<?=$ar_res["PREVIEW_PICTURE"]?>" alt="image">
+											<img src="<?echo CFile::GetPath($ar_res["PREVIEW_PICTURE"]);?>" alt="image">
 										</div>
 									<?endif;?>
 

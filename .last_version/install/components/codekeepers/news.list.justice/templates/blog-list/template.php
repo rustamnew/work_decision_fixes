@@ -17,25 +17,6 @@ $this->setFrameMode(true);
 
 <div class="row">
 	<?foreach($arResult["ITEMS"] as $arItem):?>
-
-		<?if($arItem["TAGS"]):?>
-			<?
-			$string = $arItem["TAGS"];
-			$string_array = explode(', ', $string);
-			$string_done = "";
-			$max_length = 60;
-
-			foreach($string_array as $item) {
-				if (iconv_strlen($string_done . $item) < $max_length) {
-					if ($string_done) {
-						$string_done .=", " . $item;
-					} else {
-						$string_done .= $item;
-					}
-				}
-			}
-			?>
-		<?endif;?>
 		<?
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
@@ -47,13 +28,21 @@ $this->setFrameMode(true);
 					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="open-post">
 						<img class="img-fluid" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="blog">
 					</a>
+				</div>
+
+				<div class="text-box">
 					<?if($arItem["TAGS"]):?>
-						<ul class="blog-item-tags">
-							<li><a><?=$string_done?></a></li>
+						<ul class="tags-list">
+							<?
+							$string = $arItem["TAGS"];
+							$string_array = explode(', ', $string);
+							$array_tags = array_slice($string_array, 0, $array_length);
+							?>
+							<?foreach($array_tags as $item):?>
+								<li><a href="<?=SITE_DIR?>blog/?tags=<?=$item;?>"><?=$item;?></a></li>
+							<?endforeach;?>	
 						</ul>
 					<?endif;?>
-				</div>
-				<div class="text-box">
 					<span class="blog-date"><?echo FormatDateFromDB($arItem["DATE_CREATE"], 'SHORT');?></span>
 					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="title-blog">
 						<h5><?=$arItem["NAME"]?></h5>

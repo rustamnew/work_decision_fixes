@@ -35,7 +35,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 
 		<?if($GLOBALS['global_info']['captcha_show']):?>
 			<div class="captcha-wrap">
-				<div class="g-recaptcha" data-sitekey="<?=$GLOBALS['global_info']['google_cap_code']?>"></div>
+				<div class="g-recaptcha" id="recaptcha_short"></div>
 			</div>
 		<?endif;?>
 

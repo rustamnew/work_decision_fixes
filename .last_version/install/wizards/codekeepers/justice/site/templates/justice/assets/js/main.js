@@ -495,7 +495,7 @@ $(document).ready(function () {
         e.preventDefault()
         let valide = true
 
-        if ($("#feedback-form").find(".g-recaptcha").length > 0) {
+        if ($("#feedback-form").find(".captcha-wrap").length > 0) {
             valide = false
             let response = grecaptcha.getResponse()
             if(response.length == 0) {
@@ -525,9 +525,9 @@ $(document).ready(function () {
         e.preventDefault()
         let valide = true
 
-        if ($("#feedback-form-popup").find(".g-recaptcha").length > 0) {
+        if ($("#feedback-form-popup").find(".captcha-wrap").length > 0) {
             valide = false
-            let response = grecaptcha.getResponse()
+            let response = grecaptcha.getResponse(1)
             if(response.length == 0) {
                 console.log('wrong')
             } else {
@@ -553,9 +553,9 @@ $(document).ready(function () {
 
     $("#feedback-form-contacts").submit(function (e) {
         e.preventDefault()
-        let valide = true
+        let valide = false
 
-        if ($("#feedback-form-contacts").find(".g-recaptcha").length > 0) {
+        if ($("#feedback-form-contacts").find(".captcha-wrap").length > 0) {
             valide = false
             let response = grecaptcha.getResponse()
             if(response.length == 0) {
@@ -563,7 +563,9 @@ $(document).ready(function () {
             } else {
                 valide = true
             }
-	    } 
+	    } else {
+            valide = true
+        }
     
         if (valide) {
             $.ajax({
@@ -585,7 +587,7 @@ $(document).ready(function () {
         e.preventDefault()
         let valide = true
 
-        if ($("#feedback-form-short").find(".g-recaptcha").length > 0) {
+        if ($("#feedback-form-short").find(".captcha-wrap").length > 0) {
             valide = false
             let response = grecaptcha.getResponse()
             if(response.length == 0) {

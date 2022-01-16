@@ -202,7 +202,7 @@
 
 
     .header .banner .handline {
-		font-size: 37px !important;
+		font-size: 37px;
 	}
     .sec-title h3 {
 		font-size: 29px;
@@ -227,8 +227,8 @@
     }
     
     /* :: Header */
-    .header .banner .handline{
-        font-size: 58px;
+    .header .banner .handline {
+        font-size: 50px;
     }
     .header-2 .box-hero .services-header{
         display: none !important;
@@ -268,7 +268,7 @@
     
     /* :: Header */
     .header .banner .handline {
-        font-size: 48px;
+        font-size: 34px;
     }
     
     /* :: Menu Box */

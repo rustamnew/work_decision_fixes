@@ -385,9 +385,37 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/fancybox.umd.js')?>"></script>
 
         <!-- Google reCAPTCHA -->
-        <script src='https://www.google.com/recaptcha/api.js'></script>
+		<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
+		<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+		<script type="text/javascript">
+			var CaptchaCallback = function() {
+				if ( $('#recaptcha_mainform').length ) {
+                    grecaptcha.render('recaptcha_mainform', {
+                        'sitekey' : "<?=$GLOBALS['global_info']['google_cap_code']?>"
+                    });
+				}
+				if ( $('#recaptcha_short').length ) {
+                    grecaptcha.render('recaptcha_short', {
+                        'sitekey' : "<?=$GLOBALS['global_info']['google_cap_code']?>"
+                    });
+				}
+				if ( $('#recaptcha_contacts').length ) {
+                    grecaptcha.render('recaptcha_contacts', {
+                        'sitekey' : "<?=$GLOBALS['global_info']['google_cap_code']?>"
+                    });
+				}
+				if ( $('#recaptcha_popup').length ) {
+                    grecaptcha.render('recaptcha_popup', {
+                        'sitekey' : "<?=$GLOBALS['global_info']['google_cap_code']?>"
+                    });
+				}
+			};
+		</script>
         
         <!-- :: Main JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/main.js')?>"></script>
+
+        <!--Theme Colors-->
+        <?require($_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH."/assets/css/theme-style.php");?>
     </body>
 </html>

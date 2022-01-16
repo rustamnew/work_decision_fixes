@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("image", SITE_TEMPLATE_PATH."/assets/images/header/06_header.jpg");
-$APPLICATION->SetTitle("Проекты");
+$APPLICATION->SetTitle("Выигранные дела");
 ?><?$APPLICATION->IncludeComponent(
 	"codekeepers:news.justice", 
 	"projects", 
