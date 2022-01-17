@@ -356,18 +356,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <img class="success-icon__icon animate__animated animate__bounceInUp" id="success-icon__icon" src="<?=SITE_TEMPLATE_PATH?>/assets/images/icons/success.svg" alt="icon">
         </div>
 
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery-3.5.1.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/popper.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/bootstrap.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/owl.carousel.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.nice-select.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.waypoints.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.counterup.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/lity.min.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.fancybox-1.3.4.pack.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/fancybox.umd.js')?>"></script>
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/main.js')?>"></script>
-
         <!-- Google reCAPTCHA -->
 		<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 		<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
