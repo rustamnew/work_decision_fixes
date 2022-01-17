@@ -11,6 +11,26 @@
 (function () {
     'use strict';
 
+}());
+
+$(document).ready(function () {
+    $('.case-study-item').on('mouseenter', function (e) {
+        x = e.pageX - $(this).offset().left,
+            y = e.pageY - $(this).offset().top;
+        $(this).find('span').css({
+            top: y,
+            left: x
+        });
+    });
+    $('.case-study-item').on('mouseout', function (e) {
+        x = e.pageX - $(this).offset().left,
+            y = e.pageY - $(this).offset().top;
+        $(this).find('span').css({
+            top: y,
+            left: x
+        });
+    });
+
     // :: Loading
     $(window).on('load', function () {
         $('.loading').fadeOut();
@@ -94,6 +114,7 @@
     $('.menu-box .inner-menu').on('click', function (e) {
         e.stopPropagation();
     });
+
 
     // :: OWL Carousel Js Header Hero
     $('.header-owl').owlCarousel({
@@ -459,37 +480,7 @@
         $('body').toggleClass('active-dark-mode-decision');
     });
 
-    
-    
-}());
 
-// :: Setup mouseenter On Case Study
-$(document).ready(function () {
-    $('.case-study-item').on('mouseenter', function (e) {
-        x = e.pageX - $(this).offset().left,
-            y = e.pageY - $(this).offset().top;
-        $(this).find('span').css({
-            top: y,
-            left: x
-        });
-    });
-    $('.case-study-item').on('mouseout', function (e) {
-        x = e.pageX - $(this).offset().left,
-            y = e.pageY - $(this).offset().top;
-        $(this).find('span').css({
-            top: y,
-            left: x
-        });
-    });
-});
-
-
-/////////////////////////////////////
-
-
-
-
-$(document).ready(function () {
     let summonedSuccess = document.querySelector('#success-icon');
 
     $("#feedback-form").submit(function (e) {
@@ -699,15 +690,17 @@ $(document).ready(function () {
         let row = document.querySelector(`[data-number-row='${num}']`)
         row.classList.add('active')
     })
+
+    $(document).click(function (e) {
+        if ($(e.target).is('#success-icon') || $(e.target).is('#success-icon__icon')) {
+            e.preventDefault()
+            summonedSuccess.classList.remove('active');
+        }
+    });
 });
 
 
-$(document).click(function (e) {
-	if ($(e.target).is('#success-icon') || $(e.target).is('#success-icon__icon')) {
-        e.preventDefault()
-        summonedSuccess.classList.remove('active');
-    }
-});
+
 
 ///////////////////////////////////////////
 
