@@ -140,7 +140,7 @@
 
     // :: Owl Carousel Plugin
     $('.history-line').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 0,
         responsive: {
             0: {
@@ -486,10 +486,11 @@ $(document).ready(function () {
 
 /////////////////////////////////////
 
-let summonedSuccess = document.querySelector('#success-icon');
+
 
 
 $(document).ready(function () {
+    let summonedSuccess = document.querySelector('#success-icon');
 
     $("#feedback-form").submit(function (e) {
         e.preventDefault()
@@ -511,7 +512,7 @@ $(document).ready(function () {
                 data: $(this).serialize() + "&submit=Отправить",
                 type: 'POST',
                 success: function (data) {
-                    summonedSuccess.classList.add('active')
+                    summonedSuccess.classList.add('active');
                     $("#feedback-form")[0].reset();
                 },
                 error: function (data) {
@@ -541,7 +542,7 @@ $(document).ready(function () {
                 data: $(this).serialize() + "&submit=Отправить",
                 type: 'POST',
                 success: function (data) {
-                    summonedSuccess.classList.add('active')
+                    summonedSuccess.classList.add('active');
                     $("#feedback-form-popup")[0].reset();
                 },
                 error: function (data) {
@@ -573,7 +574,7 @@ $(document).ready(function () {
                 data: $(this).serialize() + "&submit=Отправить",
                 type: 'POST',
                 success: function (data) {
-                    summonedSuccess.classList.add('active')
+                    summonedSuccess.classList.add('active');
                     $("#feedback-form-contacts")[0].reset();
                 },
                 error: function (data) {
@@ -603,7 +604,7 @@ $(document).ready(function () {
                 data: $(this).serialize() + "&submit=Отправить",
                 type: 'POST',
                 success: function (data) {
-                    summonedSuccess.classList.add('active')
+                    summonedSuccess.classList.add('active');
                     $("#feedback-form-short")[0].reset();
                 },
                 error: function (data) {
@@ -612,7 +613,6 @@ $(document).ready(function () {
             });
         }
 	})
-
 
     BX.ready(function(){
         loader = BX('ajax-preloader-wrap');
@@ -625,13 +625,87 @@ $(document).ready(function () {
             BX.removeClass(loader, 'ajax-preloader--animated');
         };
     });
- });
+
+    //product detail info 
+    let productInfo = document.querySelector('.product-detail-text-additional')
+    let productSpecs = document.querySelector('.product-detail-text-specs')
+    let buttonInfo = document.querySelector('.product-detail-text-additional-button')
+    let buttonSpecs = document.querySelector('.product-detail-text-specs-button')
+
+    if (buttonSpecs) {
+        buttonSpecs.addEventListener('click', (e) => {
+            e.preventDefault()
+            productInfo.classList.remove('active')
+            productSpecs.classList.add('active')
+        })
+    }
+    if (buttonInfo) {
+        buttonInfo.addEventListener('click', (e) => {
+            e.preventDefault()
+            productSpecs.classList.remove('active')
+            productInfo.classList.add('active')
+        })
+    }
+
+    //открытие формы
+    let summonButtons = document.querySelectorAll('.summonFormButton')
+
+    summonButtons.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault()
+            let formWrap = document.querySelector('#summonedFormWrap')
+            formWrap.classList.add('active')
+        })
+    })
+
+    //Закрытие формы
+    let formWrap = document.querySelector('#summonedFormWrap')
+
+    let closeFancybox = (e) => {
+        if (e) {
+            e.preventDefault()
+        }
+        
+        formWrap.classList.remove('active')
+    }
+
+    formWrap.addEventListener('click', (e) => {
+        if(e.target.id === 'summonedFormWrap') {
+            closeFancybox(e)
+        }
+    })
+
+    //Блок Услуги
+    $(".services-section-button").on('click', (e) => {
+        e.preventDefault()
+
+        let buttons = document.querySelectorAll('.services-section-button')
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove('active')
+        }
+
+        let target = e.currentTarget
+        target.classList.add('active')
+
+        let num = e.currentTarget.getAttribute("data-number")
+        let wrap = document.querySelector('.services-sections-block-rows')
+        let rows = wrap.querySelectorAll('.row')
+
+        for (let i = 0; i < rows.length; i++) {
+            rows[i].classList.remove('active')
+        }
+
+        let row = document.querySelector(`[data-number-row='${num}']`)
+        row.classList.add('active')
+    })
+});
 
 
 $(document).click(function (e) {
 	if ($(e.target).is('#success-icon') || $(e.target).is('#success-icon__icon')) {
         e.preventDefault()
-        summonedSuccess.classList.remove('active')
+        summonedSuccess.classList.remove('active');
     }
 });
 
@@ -668,82 +742,3 @@ $(function() {
 });
 
 
-//product detail info 
-
-let productInfo = document.querySelector('.product-detail-text-additional')
-let productSpecs = document.querySelector('.product-detail-text-specs')
-
-let buttonInfo = document.querySelector('.product-detail-text-additional-button')
-let buttonSpecs = document.querySelector('.product-detail-text-specs-button')
-
-if (buttonSpecs) {
-    buttonSpecs.addEventListener('click', (e) => {
-        e.preventDefault()
-        productInfo.classList.remove('active')
-        productSpecs.classList.add('active')
-    })
-}
-if (buttonInfo) {
-    buttonInfo.addEventListener('click', (e) => {
-        e.preventDefault()
-        productSpecs.classList.remove('active')
-        productInfo.classList.add('active')
-    })
-}
-
-
-
-
-//открытие формы
-let summonButtons = document.querySelectorAll('.summonFormButton')
-
-summonButtons.forEach((item) => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault()
-        let formWrap = document.querySelector('#summonedFormWrap')
-        formWrap.classList.add('active')
-    })
-})
-
-//Закрытие формы
-let formWrap = document.querySelector('#summonedFormWrap')
-
-let closeFancybox = (e) => {
-    if (e) {
-        e.preventDefault()
-    }
-    
-    formWrap.classList.remove('active')
-}
-
-formWrap.addEventListener('click', (e) => {
-    if(e.target.id === 'summonedFormWrap') {
-        closeFancybox(e)
-    }
-})
-
-
-//Блок Услуги
-$(".services-section-button").on('click', (e) => {
-	e.preventDefault()
-
-	let buttons = document.querySelectorAll('.services-section-button')
-
-	for (let i = 0; i < buttons.length; i++) {
-		buttons[i].classList.remove('active')
-	}
-
-	let target = e.currentTarget
-	target.classList.add('active')
-
-	let num = e.currentTarget.getAttribute("data-number")
-	let wrap = document.querySelector('.services-sections-block-rows')
-	let rows = wrap.querySelectorAll('.row')
-
-	for (let i = 0; i < rows.length; i++) {
-		rows[i].classList.remove('active')
-	}
-
-	let row = document.querySelector(`[data-number-row='${num}']`)
-	row.classList.add('active')
-})

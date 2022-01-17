@@ -1396,7 +1396,6 @@ header.navs.active{
 
 /* :: Practice Area */
 .practice-area{
-    //background-color: #F9F9F9;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3454,7 +3453,7 @@ body.active-dark-mode-decision,
     color: #F9F9F9;
 }
 
-//.active-dark-mode-decision .practice-area,
+.active-dark-mode-decision .practice-area,
 .active-dark-mode-decision .quote .box,
 .active-dark-mode-decision .provide .text-box,
 .active-dark-mode-decision .statistic-owl,
@@ -4116,9 +4115,7 @@ section.provide .img-box .statistic-item-icon img{
     color: #FFF !important; 
     width: 100%;
 }
-.discounts__button:hover {
-    //color: #C89D66;
-}
+
 
 .active-dark-mode-decision .introduction-advisors {
     color: #FFF;
@@ -4381,9 +4378,7 @@ section.provide .img-box .statistic-item-icon img{
 
 .flat-get-in-touch .contact-info h2 {
     font-family: 'Montserrat', sans-serif;
-    //font-size: 36px;
     line-height: 56px;
-    //font-weight: 600;
     color: #fff;
     letter-spacing: -1.3px;
     margin-bottom: 30px;

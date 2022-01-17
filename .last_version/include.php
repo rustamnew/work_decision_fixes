@@ -23,4 +23,10 @@ class CJustice
 
 	}
 }
+CModule::AddAutoloadClasses(
+	'codekeepers.justice',
+	array(
+		'CJusticeMain' => 'classes/general/CJusticeMain.php'
+	)
+)
 ?>

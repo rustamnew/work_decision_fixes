@@ -356,33 +356,17 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             <img class="success-icon__icon animate__animated animate__bounceInUp" id="success-icon__icon" src="<?=SITE_TEMPLATE_PATH?>/assets/images/icons/success.svg" alt="icon">
         </div>
 
-        <!-- :: jQuery JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery-3.5.1.min.js')?>"></script>
-
-        <!-- :: Popper JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/popper.min.js')?>"></script>
-
-        <!-- :: BootStrap JS -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/bootstrap.min.js')?>"></script>
-
-        <!-- :: OWL Carousel -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/owl.carousel.min.js')?>"></script>
-
-        <!-- :: Nice Select -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.nice-select.min.js')?>"></script>
-
-        <!-- :: Waypoints -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.waypoints.min.js')?>"></script>
-
-        <!-- :: CounterUp -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.counterup.min.js')?>"></script>
-
-        <!-- :: Lity -->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/lity.min.js')?>"></script>
-
-        <!-- Fancybox-->
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/jquery.fancybox-1.3.4.pack.js')?>"></script>
         <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/fancybox.umd.js')?>"></script>
+        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/main.js')?>"></script>
 
         <!-- Google reCAPTCHA -->
 		<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
@@ -411,9 +395,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				}
 			};
 		</script>
-        
-        <!-- :: Main JS -->
-        <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH. '/assets/js/main.js')?>"></script>
 
         <!--Theme Colors-->
         <?require($_SERVER["DOCUMENT_ROOT"].SITE_TEMPLATE_PATH."/assets/css/theme-style.php");?>

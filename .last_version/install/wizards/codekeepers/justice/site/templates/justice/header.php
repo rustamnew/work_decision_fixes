@@ -3,16 +3,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 $isMainPage = $APPLICATION->GetCurPage(false) === SITE_DIR;
 ?>
-
 <?require($_SERVER["DOCUMENT_ROOT"].SITE_DIR."include/iblock_id_link.php");?>
+
 <?
-$GLOBALS['global_info'];
-if(CModule::IncludeModule('iblock')) {
-    $db_props = CIBlockElement::GetProperty($GLOBALS["codekeepers_block_id"]["settings_main_id"], $GLOBALS["codekeepers_block_id"]["settings_main_element_id"], 'sort', 'asc', array());
-    while($ar_props = $db_props->Fetch()){
-        $GLOBALS["global_info"][$ar_props["CODE"]] = $ar_props["VALUE"];
-    }
-}
+$GLOBALS = $GLOBALS + CJusticeMain::MainProperty($GLOBALS["codekeepers_block_id"]["settings_main_id"], $GLOBALS["codekeepers_block_id"]["settings_main_element_id"]);
 ?>
 
 <?
@@ -28,7 +22,6 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
         <!--Favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="<?=SITE_TEMPLATE_PATH?>/assets/images/favicon/favicon-32x32.png">
@@ -38,52 +31,23 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
         <meta name="msapplication-TileColor" content="#262b3e">
         <meta name="theme-color" content="#ffffff">
 
-
         <title><?$APPLICATION->ShowTitle();?></title>
-        
-        <!-- :: Bootstrap CSS -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/bootstrap.min.css');?>
 
         <!-- :: Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <?$APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");?>
 
-        <!-- :: Fontawesome -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/fonts/fontawesome/css/all.min.css');?>
-
-        <!-- :: Flaticon -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/fonts/flaticon/css/flaticon.css');?>
-
-        <!-- :: OWL Carousel -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/owl.carousel.min.css');?>
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/owl.theme.default.min.css');?>
-
-        <!-- :: Nice Select CSS -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/nice-select.css');?>
-
-        <!-- :: Lity -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/lity.min.css');?>
-
-        <!-- :: Animate CSS -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/animate.css');?>
-
-        <!-- :: Style CSS -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/style.css');?>
-
-        <!-- :: Style Responsive CSS -->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/responsive.css');?>
-
-        <!--Fancybox-->
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. "/assets/css/jquery.fancybox-1.3.4.css");?>
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH. '/assets/css/fancybox.css');?>
-
-
         <!--[if lt IE 9]>
                 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
             <![endif]-->
-        <?$APPLICATION->ShowHead();?>
+
+        <?
+        
+        CModule::IncludeModule("codekeepers.justice"){CJusticeMain::MainHeaderAssets()};
+        $APPLICATION->ShowHead();
+        ?>
     </head>
     
     <body>

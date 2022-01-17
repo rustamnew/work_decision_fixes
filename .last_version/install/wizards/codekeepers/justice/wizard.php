@@ -19,7 +19,7 @@ class SelectTemplateStep extends CSelectTemplateWizardStep
 	function InitStep()
 	{
 		parent::InitStep();
-		// следующий шаг - настройки сайта (пропускаем выбор тему - так как ее нет)
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ)
 		$this->SetNextStep("site_settings");
 	}
 
@@ -38,7 +38,7 @@ class SelectTemplateStep extends CSelectTemplateWizardStep
 		if (empty($arTemplates))
 			return;
 
-		// устанавливаем шаблон по-умолчанию
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		$wizard->SetVar("templateID", "justice");
 
 		$templateID = $wizard->GetVar("templateID");
@@ -66,8 +66,8 @@ class SelectTemplateStep extends CSelectTemplateWizardStep
 
 		foreach ($arTemplates as $templateID => $arTemplate)
 		{
-			// выводим только один шаблон, выбранный по-умолчанию
-			// остальные не показываем
+			// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+			// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			if($templateID !== $defaultTemplateID) continue;
 
 			if ($defaultTemplateID == "")
@@ -136,7 +136,7 @@ class SiteSettingsStep extends CSiteSettingsWizardStep
 		$this->content .= CFile::ShowImage($siteLogo, 209, 61, "border=0 vspace=15");
 		$this->content .= "<br />".$this->ShowFileField("siteLogo", Array("show_file_info" => "N", "id" => "site-logo"))."</div>";*/
 
-		/*$this->content .= '<div class="wizard-upload-img-block"><div class="wizard-catalog-title">Телефон</div>';
+		/*$this->content .= '<div class="wizard-upload-img-block"><div class="wizard-catalog-title">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>';
 		$this->content .= $this->ShowInputField("textarea", "sitePhone", Array("id" => "site-phone", "class" => "wizard-field", "rows"=>"1"))."</div>";*/
 
 		$this->content .= '<div class="wizard-upload-img-block"><div class="wizard-catalog-title">'.GetMessage("WIZ_COMPANY_SLOGAN").'</div>';
@@ -311,7 +311,6 @@ class FinishStep extends CFinishWizardStep
 					'</td>
 				</tr>
 			</table>';
-	//	$this->content .= "<br clear=\"all\"><a href=\"/bitrix/admin/wizard_install.php?lang=".LANGUAGE_ID."&site_id=".$siteID."&wizardName=bitrix:xstore.mobile&".bitrix_sessid_get()."\" class=\"button-next\"><span id=\"next-button-caption\">".GetMessage("wizard_store_mobile")."</span></a><br>";
 
 		if ($wizard->GetVar("installDemoData") == "Y")
 			$this->content .= GetMessage("FINISH_STEP_REINDEX");
