@@ -6,13 +6,15 @@ $isMainPage = $APPLICATION->GetCurPage(false) === SITE_DIR;
 <?require($_SERVER["DOCUMENT_ROOT"].SITE_DIR."include/iblock_id_link.php");?>
 
 <?
-$GLOBALS = $GLOBALS + CJusticeMain::MainProperty($GLOBALS["codekeepers_block_id"]["settings_main_id"], $GLOBALS["codekeepers_block_id"]["settings_main_element_id"]);
-?>
-
-<?
 global $searchBlog;
 $searchBlog["%TAGS"] = $_REQUEST["tags"];
 ?>
+
+<?
+$GLOBALS += CJusticeMain::MainProperty($GLOBALS["codekeepers_block_id"]["settings_main_id"], $GLOBALS["codekeepers_block_id"]["settings_main_element_id"]);
+?>
+
+
 
 <!doctype html>
 <html lang="ru">
@@ -37,6 +39,22 @@ $searchBlog["%TAGS"] = $_REQUEST["tags"];
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <?$APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");?>
+
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(87164852, "init", {
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/87164852" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
         <!--[if lt IE 9]>
                 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
