@@ -3630,6 +3630,7 @@ div.bx-component-opener {
     padding-bottom: 0;
 }
 
+.single-practice-areas-list li.open .link a, 
 .single-practice-areas-list li.active .link a, 
 .single-practice-areas-list li:hover .link a{
     color: #C89D66;
